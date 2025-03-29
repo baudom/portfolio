@@ -1,0 +1,14 @@
+# artifacts
+
+.idea
+.vscode
+.next
+node_modules
+build
+
+# images or text
+*.(png,txt,ico,svg)
+
+CHANGELOG.md
+
+.github
