@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --background: #EEE;
+    --foreground: #283C5F;
+
+    --border-color: var(--foreground);
+
+    scroll-behavior: smooth;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #283C5F;
+        --foreground: #DDD;
+    }
+}
+
+body {
+    color: var(--foreground);
+    background: var(--background);
+}
+
+h1 {
+    @apply text-5xl;
+    @apply font-bold;
+}
+
+h2 {
+    @apply text-2xl;
+}
+
+h3 {
+    @apply text-xl;
+}
