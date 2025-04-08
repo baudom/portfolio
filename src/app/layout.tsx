@@ -5,8 +5,9 @@ import {
     Open_Sans as Sans,
 } from "next/font/google";
 import "./globals.css";
-import { FC, ReactNode } from "react";
+import { FC } from "react";
 import Footer from "@/components/Footer";
+import { WithChildren } from "@/types/react";
 
 const sansFont = Sans({
     subsets: ["latin"],
@@ -34,7 +35,7 @@ export async function generateMetadata(): Promise<Metadata> {
     };
 }
 
-const RootLayout: FC<{ children: ReactNode }> = ({ children }) => {
+const RootLayout: FC<WithChildren> = ({ children }) => {
     return (
         <html lang="de">
             <head>
