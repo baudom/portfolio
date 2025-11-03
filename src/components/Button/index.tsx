@@ -5,24 +5,37 @@ import { cn } from "@/utils/tailwind";
 import Link from "@/components/Link";
 import { WithChildren, WithClassName } from "@/types/react";
 
+type ButtonVariant = "primary" | "secondary" | "secondary-outline";
+
 type ButtonProps = WithChildren &
     WithClassName & {
-        name: string;
         href?: string;
+        variant?: ButtonVariant;
     };
 
-const Button: FC<ButtonProps> = ({ name, href, className, children }) => {
+const variantClasses: Record<ButtonVariant, string> = {
+    primary: "bg-background text-foreground",
+    secondary: "bg-foreground text-background",
+    "secondary-outline": "bg-foreground text-background border-background",
+};
+
+const Button: FC<ButtonProps> = ({
+    variant = "primary",
+    href,
+    className,
+    children,
+}) => {
     const baseClasses = cn(
-        classes.animated,
+        classes,
         BASE_ANIMATIONS,
-        "p-2 font-bold border-2 rounded-lg skewed shadow-lg",
+        variantClasses[variant],
+        "p-2 font-bold border-2 rounded-lg skewed",
     );
     const styledChildren = <div className="skewed-reverse">{children}</div>;
 
     if (href) {
         return (
             <Link
-                title={name}
                 href={href}
                 target="_self"
                 className={cn(baseClasses, "text-center", className)}
@@ -33,12 +46,7 @@ const Button: FC<ButtonProps> = ({ name, href, className, children }) => {
     }
 
     return (
-        <button
-            title={name}
-            className={cn(baseClasses, className)}
-        >
-            {styledChildren}
-        </button>
+        <button className={cn(baseClasses, className)}>{styledChildren}</button>
     );
 };
 

@@ -1,8 +1,9 @@
 import { FC } from "react";
+import AboutSection from "@/components/Sections/About";
 
 const Page: FC = () => (
-    <div className="h-screen text-center content-center p-4">
-        <h1>Hier könnte ihre Werbung stehen!</h1>
+    <div className="flex flex-col gap-12">
+        <AboutSection />
     </div>
 );
 

@@ -3,29 +3,25 @@
 @tailwind utilities;
 
 :root {
-    --background: #EEE;
-    --foreground: #283C5F;
+    --background: #283C5F;
+    --foreground: #DDD;
 
     --border-color: var(--foreground);
 
     scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --background: #283C5F;
-        --foreground: #DDD;
-    }
-}
-
 body {
     color: var(--foreground);
     background: var(--background);
+
+    main {
+        overflow: hidden;
+    }
 }
 
 h1 {
-    @apply text-5xl;
-    @apply font-bold;
+    @apply text-5xl font-bold;
 }
 
 h2 {
@@ -34,4 +30,30 @@ h2 {
 
 h3 {
     @apply text-xl;
+}
+
+@keyframes wiggle {
+    40% {
+        transform: rotate(0deg);
+    }
+    45% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+    55% {
+        transform: rotate(-5deg);
+    }
+    60% {
+        transform: rotate(0deg);
+    }
+}
+
+.skewed {
+    @apply skew-x-1 md:skew-x-3;
+}
+
+.skewed-reverse {
+    @apply -skew-x-1 md:-skew-x-3;
 }

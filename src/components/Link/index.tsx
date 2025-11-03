@@ -3,7 +3,7 @@ import { WithChildren, WithClassName } from "@/types/react";
 
 type LinkProps = WithChildren &
     WithClassName & {
-        title: string;
+        title?: string;
         href: string;
         target?: HTMLAttributeAnchorTarget;
     };
