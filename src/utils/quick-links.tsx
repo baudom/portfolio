@@ -1,7 +1,7 @@
 import {
     ANCHOR_EXPERIENCE,
     ANCHOR_PROJECTS,
-    ANCHOR_SKILLS,
+    ANCHOR_TECH_STACK,
     ANCHOR_START,
     AnchorType,
 } from "@/utils/anchor";
@@ -27,8 +27,8 @@ const quickLinks: QuickLinkItem[] = [
         icon: IconBook,
     },
     {
-        title: "Fähigkeiten",
-        anchor: ANCHOR_SKILLS,
+        title: "Tech-Stack",
+        anchor: ANCHOR_TECH_STACK,
         icon: IconBulb,
     },
     {
