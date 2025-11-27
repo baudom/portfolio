@@ -1,7 +1,8 @@
 import { FC, HTMLAttributeAnchorTarget } from "react";
-import { WithChildren, WithClassName } from "@/types/react";
+import { WithChildren, WithClassName, WithOnClick } from "@/types/react";
 
 type LinkProps = WithChildren &
+    WithOnClick &
     WithClassName & {
         title?: string;
         href: string;
@@ -11,6 +12,7 @@ type LinkProps = WithChildren &
 const Link: FC<LinkProps> = ({
     title,
     href,
+    onClick,
     target = "_blank",
     className,
     children,
@@ -20,6 +22,7 @@ const Link: FC<LinkProps> = ({
         href={href}
         target={target}
         className={className}
+        onClick={onClick}
     >
         {children}
     </a>

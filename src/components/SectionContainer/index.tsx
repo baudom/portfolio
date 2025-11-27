@@ -2,16 +2,24 @@ import React, { FC } from "react";
 import { AnchorType } from "@/utils/anchor";
 import { WithChildren, WithClassName } from "@/types/react";
 import { cn } from "@/utils/tailwind";
+import Title, { TitleProps } from "@/components/Title";
 
 type SectionContainerProps = WithChildren &
     WithClassName & {
         id: AnchorType;
+        title?: TitleProps;
+        hasFullWidthChildren?: boolean;
     };
+
+const WIDTH_CLASSES = "w-11/12 md:w-9/12";
+// NOTE: keep ~aligned with Carousel width
 
 const SectionContainer: FC<SectionContainerProps> = ({
     id,
     className,
     children,
+    title,
+    hasFullWidthChildren = false,
 }) => (
     <section
         id={id.replace("#", "")}
@@ -20,7 +28,12 @@ const SectionContainer: FC<SectionContainerProps> = ({
             className,
         )}
     >
-        <div className="w-11/12 md:w-9/12">{children}</div>
+        <div className={WIDTH_CLASSES}>
+            {title ? <Title {...title} /> : null}
+        </div>
+        <div className={cn(hasFullWidthChildren ? "w-full" : WIDTH_CLASSES)}>
+            {children}
+        </div>
     </section>
 );
 

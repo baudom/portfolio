@@ -50,10 +50,12 @@ h3 {
     }
 }
 
-.skewed {
-    @apply skew-x-1 md:skew-x-3;
-}
+@layer utilities {
+    .skewed {
+        @apply skew-x-1 md:skew-x-3;
+    }
 
-.skewed-reverse {
-    @apply -skew-x-1 md:-skew-x-3;
+    .skewed-reverse {
+        @apply -skew-x-1 md:-skew-x-3;
+    }
 }

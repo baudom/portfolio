@@ -6,7 +6,7 @@ const Footer: FC = () => (
     <footer className="py-4 text-center">
         <div className="flex justify-center gap-2 md:gap-4">
             <div className="flex justify-center">
-                &copy;&nbsp;{new Date().getFullYear()} Dominik Baurecht
+                &copy;&nbsp;{new Date().getFullYear()}&nbsp;Dominik Baurecht
             </div>
             &middot;
             <Link

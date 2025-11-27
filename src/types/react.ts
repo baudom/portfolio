@@ -1,9 +1,13 @@
 import { ReactNode } from "react";
 
 export type WithChildren = {
-    children: ReactNode;
+    children?: ReactNode;
 };
 
 export type WithClassName = {
     className?: string;
+};
+
+export type WithOnClick = {
+    onClick?: () => void;
 };

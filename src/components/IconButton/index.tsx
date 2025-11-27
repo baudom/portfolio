@@ -1,10 +1,11 @@
 import { FC } from "react";
 import { BASE_ANIMATIONS } from "@/utils/animations";
 import Link from "@/components/Link";
-import { WithChildren, WithClassName } from "@/types/react";
+import { WithChildren, WithClassName, WithOnClick } from "@/types/react";
 import { cn } from "@/utils/tailwind";
 
 type IconButtonProps = WithChildren &
+    WithOnClick &
     WithClassName & {
         name: string;
         href?: string;
@@ -13,6 +14,7 @@ type IconButtonProps = WithChildren &
 const IconButton: FC<IconButtonProps> = ({
     name,
     href,
+    onClick,
     className,
     children,
 }) => {
@@ -22,6 +24,7 @@ const IconButton: FC<IconButtonProps> = ({
                 title={name}
                 href={href}
                 className={cn(BASE_ANIMATIONS, className)}
+                onClick={onClick}
             >
                 {children}
             </Link>
@@ -32,6 +35,7 @@ const IconButton: FC<IconButtonProps> = ({
         <button
             title={name}
             className={cn(BASE_ANIMATIONS, className)}
+            onClick={onClick}
         >
             {children}
         </button>
