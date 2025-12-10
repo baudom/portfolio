@@ -30,5 +30,5 @@
 }
 
 .embla__dot--selected:after {
-    @apply opacity-100;
+    @apply opacity-100 bg-secondary;
 }

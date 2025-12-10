@@ -1,7 +1,7 @@
-import { Children, FC, ReactElement } from "react";
+import { Children, FC, memo, ReactElement } from "react";
 import { WithChildren } from "@/types/react";
 
-const List: FC<WithChildren> = ({ children }) => {
+const ProjectList: FC<WithChildren> = ({ children }) => {
     return (
         <ul className="mt-2 list-disc list-inside">
             {Children.map(children, (child) => (
@@ -16,4 +16,4 @@ const List: FC<WithChildren> = ({ children }) => {
     );
 };
 
-export default List;
+export default memo(ProjectList);

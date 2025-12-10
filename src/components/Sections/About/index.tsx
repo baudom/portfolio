@@ -13,7 +13,7 @@ import Card from "@/components/Card";
 const AboutSection: FC = () => (
     <SectionContainer id={ANCHOR_START}>
         <Card>
-            <div className="flex flex-col-reverse md:flex-row mb-12">
+            <div className="flex flex-col-reverse md:flex-row mb-8 md:mb-12">
                 <div className="flex flex-1 flex-col justify-between text-center md:text-start">
                     <Title
                         anchor={ANCHOR_START}
@@ -57,12 +57,12 @@ const AboutSection: FC = () => (
                     </div>
                 </div>
             </div>
-            <div className="skewed-reverse grid gap-4 w-full grid-cols-1 md:grid-cols-3">
+            <div className="skewed-reverse grid gap-2 md:gap-4 w-full grid-cols-1 md:grid-cols-3">
                 {quickLinks.slice(1).map((a) => (
                     <Button
                         key={a.title}
                         href={a.anchor}
-                        variant="secondary-outline"
+                        variant="outline"
                     >
                         {a.title}
                     </Button>

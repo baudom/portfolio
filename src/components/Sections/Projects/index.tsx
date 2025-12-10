@@ -2,32 +2,40 @@ import { FC } from "react";
 import SectionContainer from "@/components/SectionContainer";
 import { ANCHOR_PROJECTS } from "@/utils/anchor";
 import {
+    IconAffiliate,
     IconBox,
     IconBrandAzure,
     IconBrandCSharp,
     IconBrandGithub,
-    IconBrandGitlab,
     IconBrandMantine,
-    IconBrandNextjs,
     IconBrandTabler,
-    IconBrandTailwind,
-    IconBrandTypescript,
     IconCalendarEvent,
     IconClock,
     IconDatabase,
-    IconGitCommit,
-    IconGraph,
-    IconLanguage,
     IconSeo,
     IconTestPipe,
-    IconTools,
     IconUserHeart,
     IconWorld,
 } from "@tabler/icons-react";
+import {
+    devopsTag,
+    nextJsTag,
+    tailwindCssTag,
+    typescriptTag,
+} from "@/types/tag";
 import ProjectCard from "@/components/ProjectCard";
 import Carousel from "@/components/Carousel";
-import List from "@/components/List";
+import ProjectList from "./ProjectList";
 import Image from "next/image";
+import {
+    SiDotnetHex,
+    SiGithub,
+    SiGithubHex,
+    SiGitlab,
+    SiGitlabHex,
+    SiI18next,
+    SiI18nextHex,
+} from "@icons-pack/react-simple-icons";
 
 const ProjectsSection: FC = async () => {
     return (
@@ -37,7 +45,7 @@ const ProjectsSection: FC = async () => {
             title={{
                 title: "Projekte",
                 anchor: ANCHOR_PROJECTS,
-                withMarginBottom: true,
+                marginBottom: "small",
             }}
         >
             <Carousel options={{ loop: true }}>
@@ -48,8 +56,8 @@ const ProjectsSection: FC = async () => {
                         <Image
                             alt="Bild von easytank"
                             src="/images/github-easytank.png"
-                            width={24}
-                            height={24}
+                            width={32}
+                            height={32}
                             priority
                         />
                     }
@@ -66,33 +74,28 @@ const ProjectsSection: FC = async () => {
                         },
                     ]}
                     tags={[
-                        {
-                            name: "Next.js",
-                            icon: IconBrandNextjs,
-                            brandColor: "#000000",
-                        },
+                        nextJsTag,
+                        typescriptTag,
                         {
                             name: "Mantine UI",
                             icon: IconBrandMantine,
-                            brandColor: "#339AF0",
+                            color: "#339AF0",
                         },
                         { name: "SEO", icon: IconSeo },
                         {
                             name: "Internationalisierung",
-                            icon: IconLanguage,
-                            brandColor: "#26A69A",
+                            icon: SiI18next,
+                            color: SiI18nextHex,
                         },
                         {
-                            name: "Semantic Versioning",
-                            icon: IconGitCommit,
+                            name: "GitHub",
+                            icon: SiGithub,
+                            color: SiGithubHex,
                         },
-                        {
-                            name: "DevOps",
-                            icon: IconTools,
-                        },
+                        devopsTag,
                     ]}
                 >
-                    <List>
+                    <ProjectList>
                         <>
                             <b>Smarte Tankstellensuche</b>, Berechnung der&nbsp;
                             <b>Rentabilität einer Tankfahrt</b>
@@ -105,7 +108,7 @@ const ProjectsSection: FC = async () => {
                         <>
                             Support für <b>deutsche und englische</b> Sprache
                         </>
-                    </List>
+                    </ProjectList>
                 </ProjectCard>
                 <ProjectCard
                     key="event-planning"
@@ -115,12 +118,12 @@ const ProjectsSection: FC = async () => {
                         {
                             name: "Microsoft Entra ID",
                             icon: IconBrandAzure,
-                            brandColor: "#0078D4",
+                            color: "#0078D4",
                         },
                         {
                             name: "ASP.NET",
                             icon: IconBrandCSharp,
-                            brandColor: "#512BD4",
+                            color: SiDotnetHex,
                         },
                         {
                             name: "Quartz.NET",
@@ -129,7 +132,7 @@ const ProjectsSection: FC = async () => {
                         {
                             name: "xUnit",
                             icon: IconTestPipe,
-                            brandColor: "#4CAF50",
+                            color: "#4CAF50",
                         },
                         {
                             name: "TestContainers",
@@ -138,30 +141,24 @@ const ProjectsSection: FC = async () => {
                         {
                             name: "Entity Framework",
                             icon: IconDatabase,
+                            color: "#512BD4",
                         },
                         {
                             name: "Microsoft Graph",
-                            icon: IconGraph,
-                            brandColor: "#0078D4",
+                            icon: IconAffiliate,
+                            color: "#0078D4",
                         },
+                        nextJsTag,
                         {
-                            name: "Next.js",
-                            icon: IconBrandNextjs,
-                            brandColor: "#000000",
+                            name: "GitLab",
+                            icon: SiGitlab,
+                            color: SiGitlabHex,
                         },
-                        {
-                            name: "GitLab DevOps",
-                            icon: IconBrandGitlab,
-                            brandColor: "#FCA121",
-                        },
-                        {
-                            name: "Tailwind CSS",
-                            icon: IconBrandTailwind,
-                            brandColor: "#06B6D4",
-                        },
+                        devopsTag,
+                        tailwindCssTag,
                     ]}
                 >
-                    <List>
+                    <ProjectList>
                         <>
                             Zentrale <b>Event-Plattform</b> zur Organisation von
                             &nbsp;<b>standortübergreifend</b>en
@@ -182,33 +179,21 @@ const ProjectsSection: FC = async () => {
                             <b>performantes Frontend mit Next.js</b> und
                             Tailwind CSS, REST-API
                         </>
-                    </List>
+                    </ProjectList>
                 </ProjectCard>
                 <ProjectCard
                     key="portfolio"
                     title="Portfolio"
                     icon={<IconUserHeart />}
                     tags={[
-                        {
-                            icon: IconBrandNextjs,
-                            name: "Next.js",
-                            brandColor: "#000000",
-                        },
-                        {
-                            icon: IconBrandTailwind,
-                            name: "Tailwind CSS",
-                            brandColor: "#06B6D4",
-                        },
-                        {
-                            icon: IconBrandTypescript,
-                            name: "TypeScript",
-                            brandColor: "#3178C6",
-                        },
+                        nextJsTag,
+                        tailwindCssTag,
+                        typescriptTag,
                         { icon: IconSeo, name: "SEO" },
                         {
                             icon: IconBrandTabler,
                             name: "Tabler Icons",
-                            brandColor: "#066fd1",
+                            color: "#066fd1",
                         },
                     ]}
                 >
