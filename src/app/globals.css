@@ -5,6 +5,7 @@
 :root {
     --background: #283C5F;
     --foreground: #DDD;
+    --color-secondary: #FF8C00;
 
     --border-color: var(--foreground);
 
@@ -14,9 +15,15 @@
 body {
     color: var(--foreground);
     background: var(--background);
+    @apply font-sans text-base;
 
     main {
         overflow: hidden;
+
+        ::selection {
+            background: none;
+            text-shadow: 1px 1px 2px var(--color-secondary);
+        }
     }
 }
 
@@ -25,10 +32,14 @@ h1 {
 }
 
 h2 {
-    @apply text-2xl;
+    @apply text-3xl;
 }
 
 h3 {
+    @apply text-2xl;
+}
+
+h4 {
     @apply text-xl;
 }
 
@@ -51,6 +62,14 @@ h3 {
 }
 
 @layer utilities {
+    .bg-secondary {
+        background-color: var(--color-secondary);
+    }
+
+    .text-secondary {
+        color: var(--color-secondary);
+    }
+
     .skewed {
         @apply skew-x-1 md:skew-x-3;
     }

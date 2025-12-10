@@ -11,3 +11,5 @@ export type WithClassName = {
 export type WithOnClick = {
     onClick?: () => void;
 };
+
+export type SizeType = "small" | "medium";

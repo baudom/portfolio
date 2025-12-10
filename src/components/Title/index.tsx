@@ -1,15 +1,27 @@
 import { FC, memo } from "react";
 import { AnchorType } from "@/utils/anchor";
 import Link from "@/components/Link";
-import { WithClassName } from "@/types/react";
+import { SizeType, WithClassName } from "@/types/react";
 import { cn } from "@/utils/tailwind";
+import { ClassNameValue } from "tailwind-merge";
 
 export type TitleProps = WithClassName & {
     title: string;
     anchor: AnchorType;
     subTitle?: string;
     cite?: string;
-    withMarginBottom?: boolean;
+    marginBottom?: SizeType;
+};
+
+const mapSpacingType = (value?: SizeType): ClassNameValue => {
+    if (!value) return;
+
+    switch (value) {
+        case "small":
+            return "mb-2 md:mb-4";
+        case "medium":
+            return "mb-4";
+    }
 };
 
 const Title: FC<TitleProps> = ({
@@ -18,10 +30,12 @@ const Title: FC<TitleProps> = ({
     subTitle,
     cite,
     className,
-    withMarginBottom,
+    marginBottom,
 }) => {
     return (
-        <div className={cn(withMarginBottom ? "mb-2 md:mb-4" : "", className)}>
+        <div
+            className={cn(mapSpacingType(marginBottom), "max-w-fit", className)}
+        >
             <Link
                 href={anchor}
                 target="_self"
