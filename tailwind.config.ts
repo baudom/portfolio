@@ -37,6 +37,15 @@ const config: Config = {
             borderColor: {
                 DEFAULT: "var(--border-color)",
             },
+            animation: {
+                "diagonal-scroll": "diagonal-scroll 20s linear infinite",
+            },
+            keyframes: {
+                "diagonal-scroll": {
+                    "0%": { transform: "translate(0, 0)" },
+                    "100%": { transform: "translate(33.3333%, -33.3333%)" },
+                },
+            },
         },
     },
     plugins: [],

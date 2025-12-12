@@ -20,7 +20,7 @@ const mapSpacingType = (value?: SizeType): ClassNameValue => {
         case "small":
             return "mb-2 md:mb-4";
         case "medium":
-            return "mb-4";
+            return "mb-4 md:mb-8";
     }
 };
 
@@ -40,7 +40,7 @@ const Title: FC<TitleProps> = ({
                 href={anchor}
                 target="_self"
             >
-                <h1>{title}</h1>
+                <h1 className="font-black tracking-wider uppercase">{title}</h1>
             </Link>
             {subTitle ? <h2>{subTitle}</h2> : null}
             {cite ? <cite>&bdquo;{cite}&rdquo;</cite> : null}
