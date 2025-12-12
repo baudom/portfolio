@@ -56,27 +56,40 @@ const NavigationButtons: FC = () => {
 
     return (
         <nav
-            className={`fixed justify-items-center right-4 bottom-16 transition-all duration-300 ease-in-out ${
+            className={`fixed transition-all duration-300 ease-in-out z-50 p-4 pb-2 lg:p-4 rounded-lg backdrop-blur-sm bg-white/10 ${
                 navShown
-                    ? "opacity-100 translate-x-0"
-                    : "opacity-0 translate-x-20"
-            }`}
+                    ? "opacity-100 -translate-x-1/2 lg:translate-x-0"
+                    : "opacity-0 pointer-events-none -translate-x-1/2 translate-y-20 lg:translate-x-20 lg:translate-y-0"
+            } bottom-4 left-1/2 lg:left-auto lg:right-8`}
             aria-label="Navigation"
         >
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-row lg:flex-col gap-12 lg:gap-4">
                 {quickLinks.map((link, idx) => (
                     <a
                         key={link.title}
-                        title={link.title}
                         href={link.anchor}
-                        className={`ease-linear rounded-lg skewed duration-300 p-1 md:p-2 ${
-                            activeIdx === idx
-                                ? "scale-100 bg-secondary"
-                                : "scale-75"
-                        }`}
+                        className="flex flex-col items-center gap-1 group"
                         aria-current={activeIdx === idx ? "page" : undefined}
                     >
-                        <link.icon className="skewed-reverse text-white" />
+                        <div
+                            className={
+                                `flex items-center justify-center w-8 lg:w-12 h-8 lg:h-12 rounded-md transition-all duration-300 ease-in-out shadow-md group-hover:shadow-lg group-hover:scale-105 ` +
+                                (activeIdx === idx
+                                    ? "bg-secondary text-white"
+                                    : "bg-white/20 text-gray-400 group-hover:bg-white/30")
+                            }
+                        >
+                            <link.icon />
+                        </div>
+                        <span
+                            className={`text-xs lg:hidden font-bold ${
+                                activeIdx === idx
+                                    ? "text-secondary"
+                                    : "text-gray-400"
+                            }`}
+                        >
+                            {link.title}
+                        </span>
                     </a>
                 ))}
             </div>

@@ -6,11 +6,11 @@ import {
     AnchorType,
 } from "@/utils/anchor";
 import {
-    IconBook,
-    IconBulb,
-    IconHammer,
+    IconBriefcase,
+    IconCode,
+    IconHome,
     IconProps,
-    IconStack,
+    IconRocket,
 } from "@tabler/icons-react";
 import { ForwardRefExoticComponent } from "react";
 
@@ -24,22 +24,22 @@ const quickLinks: QuickLinkItem[] = [
     {
         title: "Start",
         anchor: ANCHOR_START,
-        icon: IconBook,
+        icon: IconHome,
     },
     {
         title: "Skills",
         anchor: ANCHOR_SKILLS,
-        icon: IconStack,
+        icon: IconCode,
     },
     {
         title: "Erfahrung",
         anchor: ANCHOR_EXPERIENCE,
-        icon: IconBulb,
+        icon: IconBriefcase,
     },
     {
         title: "Projekte",
         anchor: ANCHOR_PROJECTS,
-        icon: IconHammer,
+        icon: IconRocket,
     },
 ];
 

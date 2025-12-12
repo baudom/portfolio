@@ -4,8 +4,8 @@ import {
     IconBrandAzure,
     IconBrandCSharp,
     IconBrandTabler,
+    IconCloud,
     IconDeviceDesktop,
-    IconRocket,
     IconServer,
 } from "@tabler/icons-react";
 import { ReactElement } from "react";
@@ -156,7 +156,7 @@ const skillCategories: SkillCategory[] = [
         ),
     },
     {
-        icon: IconRocket,
+        icon: IconCloud,
         title: "DevOps & More",
         headline: "Automation & Infrastructure",
         skills: devopsSkills,

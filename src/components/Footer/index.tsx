@@ -3,7 +3,8 @@ import Link from "@/components/Link";
 import { ANCHOR_START } from "@/utils/anchor";
 
 const Footer: FC = () => (
-    <footer className="py-4 text-center">
+    // to keep footer visible, add padding bottom
+    <footer className="pb-32 lg:pb-4 text-center">
         <div className="flex justify-center gap-2 md:gap-4">
             <div className="flex justify-center">
                 &copy;&nbsp;{new Date().getFullYear()}&nbsp;Dominik Baurecht

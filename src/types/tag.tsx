@@ -1,5 +1,5 @@
 import { ForwardRefExoticComponent } from "react";
-import { IconAutomation, IconProps } from "@tabler/icons-react";
+import { IconCloud, IconProps } from "@tabler/icons-react";
 import {
     IconType,
     SiNextdotjs,
@@ -18,7 +18,7 @@ export type BrandTagType = {
 
 export const devopsTag: BrandTagType = {
     name: "DevOps",
-    icon: IconAutomation,
+    icon: IconCloud,
     color: "#000",
 };
 
