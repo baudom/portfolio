@@ -10,7 +10,7 @@
 
     &:hover {
         &:after {
-            left: 120%;
+            left: 125%;
             transition: all 750ms cubic-bezier(0.15, 1, 0.15, 1);
         }
     }

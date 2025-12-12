@@ -45,9 +45,7 @@ const ExperienceSection: FC = () => {
                                                 <span>{step.company}</span>
                                             </div>
 
-                                            <h3 className="font-black text-black leading-tight">
-                                                {step.title}
-                                            </h3>
+                                            <h3>{step.title}</h3>
                                         </div>
 
                                         <ul className="flex flex-col gap-2">

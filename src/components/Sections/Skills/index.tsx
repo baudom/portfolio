@@ -29,9 +29,7 @@ const SkillsSection: FC = () => {
                                         <category.icon className="skewed-reverse" />
                                     </div>
                                     <div>
-                                        <h3 className="text-xl font-bold leading-tight text-black">
-                                            {category.title}
-                                        </h3>
+                                        <h3>{category.title}</h3>
                                         <span className="text-xs font-medium uppercase tracking-wider text-gray-500">
                                             {category.headline}
                                         </span>

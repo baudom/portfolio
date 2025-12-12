@@ -31,16 +31,8 @@ h1 {
     @apply text-5xl md:text-6xl;
 }
 
-h2 {
-    @apply text-3xl;
-}
-
 h3 {
-    @apply text-2xl;
-}
-
-h4 {
-    @apply text-xl;
+    @apply text-2xl font-black leading-tight text-black;
 }
 
 @keyframes wiggle {

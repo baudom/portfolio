@@ -6,67 +6,77 @@ import IconButton from "@/components/IconButton";
 import quickLinks from "@/utils/quick-links";
 import profileLinks from "./profile-links";
 import { ANCHOR_START } from "@/utils/anchor";
-import Title from "@/components/Title";
 import Image from "next/image";
 import Card from "@/components/Card";
 
 const AboutSection: FC = () => (
     <SectionContainer id={ANCHOR_START}>
-        <Card>
-            <div className="flex flex-col-reverse md:flex-row mb-8 md:mb-12">
-                <div className="flex flex-1 flex-col justify-between text-center md:text-start">
-                    <Title
-                        anchor={ANCHOR_START}
-                        title="Dominik Baurecht"
-                        subTitle="Full-Stack Software Entwickler"
-                        cite="Probably centering your div"
-                        className="skewed-reverse"
-                    />
-                    <div className="skewed-reverse justify-items-center md:justify-items-start mt-8 md:mt-0">
-                        <span className="flex items-center gap-2 mb-2">
-                            <IconMapPin />
-                            <p>Augsburg, Bayern</p>
-                        </span>
-                        <div className="flex items-center gap-4">
-                            {profileLinks.map((link) => (
-                                <IconButton
-                                    key={link.name}
-                                    {...link}
+        <Card className="overflow-hidden backdrop-blur-sm">
+            <div className="flex flex-col-reverse md:flex-row gap-2 md:gap-16 items-center md:items-start">
+                <div className="flex flex-1 flex-col justify-between text-center md:text-start gap-8">
+                    <div className="skewed-reverse flex flex-col gap-2">
+                        <h1 className="text-4xl md:text-6xl font-black text-black leading-tight">
+                            Dominik Baurecht
+                        </h1>
+                        <h2 className="text-lg md:text-2xl font-bold text-gray-600 uppercase tracking-wider">
+                            Full-Stack Software Entwickler
+                        </h2>
+                        <cite className="text-gray-500">
+                            &quot;Probably centering your div&quot;
+                        </cite>
+                    </div>
+
+                    <div className="skewed-reverse flex flex-col items-center md:items-start gap-6">
+                        <div className="flex flex-col gap-2 items-center md:items-start">
+                            <span className="flex items-center gap-2 text-gray-700 font-semibold">
+                                <IconMapPin />
+                                <p>Augsburg, Bayern</p>
+                            </span>
+                            <div className="flex items-center gap-4">
+                                {profileLinks.map((link) => (
+                                    <IconButton
+                                        key={link.name}
+                                        {...link}
+                                    >
+                                        <link.icon />
+                                    </IconButton>
+                                ))}
+                            </div>
+                        </div>
+
+                        <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-2">
+                            {quickLinks.slice(1).map((a) => (
+                                <Button
+                                    key={a.title}
+                                    href={a.anchor}
                                 >
-                                    <link.icon />
-                                </IconButton>
+                                    <span className="flex items-center gap-2">
+                                        <a.icon size="1.25rem" />
+                                        {a.title}
+                                    </span>
+                                </Button>
                             ))}
                         </div>
                     </div>
                 </div>
+
                 <div className="justify-items-center md:justify-items-end mb-4 md:mb-0 pointer-events-none select-none">
                     <div className="relative">
-                        <p className="z-10 absolute motion-safe:animate-[wiggle_2s_infinite] -top-6 -left-6 text-6xl">
+                        <p className="z-10 absolute motion-safe:animate-[wiggle_2s_infinite] -top-8 -left-8 text-7xl">
                             &#128075;
                         </p>
-                        <div className="overflow-hidden rounded-lg border-4 border-white">
+                        <div className="overflow-hidden rounded-lg border-4 border-white shadow-2xl">
                             <Image
                                 alt="Avatar von Dominik Baurecht"
                                 src="/images/GalaxyAvatar.jpg"
-                                className="scale-110 object-cover skewed-reverse"
-                                width={225}
-                                height={225}
+                                className="object-cover skewed-reverse scale-105"
+                                width={256}
+                                height={256}
                                 priority
                             />
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className="skewed-reverse grid gap-2 md:gap-4 w-full grid-cols-1 md:grid-cols-3">
-                {quickLinks.slice(1).map((a) => (
-                    <Button
-                        key={a.title}
-                        href={a.anchor}
-                        variant="outline"
-                    >
-                        {a.title}
-                    </Button>
-                ))}
             </div>
         </Card>
     </SectionContainer>

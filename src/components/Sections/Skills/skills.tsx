@@ -3,7 +3,6 @@ import {
     IconBrandApple,
     IconBrandAzure,
     IconBrandCSharp,
-    IconBrandTabler,
     IconCloud,
     IconDeviceDesktop,
     IconServer,
@@ -61,6 +60,8 @@ import {
     SiStorybookHex,
     SiTimescale,
     SiTimescaleHex,
+    SiUmami,
+    SiUmamiHex,
 } from "@icons-pack/react-simple-icons";
 import {
     BrandTagType,
@@ -90,7 +91,6 @@ const frontendSkills: BrandTagType[] = [
         icon: SiMaterialdesign,
         color: SiMaterialdesignHex,
     },
-    { name: "Tabler", icon: IconBrandTabler, color: "#066fd1" },
     { name: "Figma", icon: SiFigma, color: SiFigmaHex },
     { name: "i18next", icon: SiI18next, color: SiI18nextHex },
 ];
@@ -124,6 +124,7 @@ const devopsSkills: BrandTagType[] = [
     },
     { name: "Sentry", icon: SiSentry, color: SiSentryHex },
     { name: "k6", icon: SiK6, color: SiK6Hex },
+    { name: "Umami", icon: SiUmami, color: SiUmamiHex },
 ];
 
 const skillCategories: SkillCategory[] = [
@@ -134,10 +135,12 @@ const skillCategories: SkillCategory[] = [
         skills: frontendSkills,
         description: (
             <>
-                <b>Daten</b> aufbereiten kann (fast) jeder, diese aber auch dem
-                Nutzer&nbsp;<b>intuitiv und modern</b> darzustellen - schon
-                weniger. Hier kann ich meiner <b>Kreativität vollen Lauf</b>
-                &nbsp;lassen.
+                <b>Skizzieren, Pixel schubsen</b> und Daten aufbereiten ist das
+                eine, das <b>Gesamtpaket</b> dem Benutzer aber auch in
+                einer&nbsp;
+                <b>intuitiven und modernen</b> Benutzeroberfläche darzustellen
+                das andere - Hier kann ich meiner <b>Kreativität vollen Lauf</b>
+                &nbsp; lassen.
             </>
         ),
     },
@@ -148,10 +151,11 @@ const skillCategories: SkillCategory[] = [
         skills: backendSkills,
         description: (
             <>
-                Von Mock-Daten zu Realen? Genau darin sehe ich die&nbsp;
-                <b>Herausforderung</b> - Spezial-Logik für&nbsp;
-                <b>individuelle Anwendungsfälle und performant</b>
-                &nbsp;auf allen Ebenen!
+                <b>Wie es unter der Haube aussieht?</b> - Interessiert mich
+                nicht nur bei Autos! Gerade in der Backend-Entwicklung sehe ich
+                die <b>Herausforderung in Spezial-Logik</b> für&nbsp;
+                <b>individuelle Anwendungsfälle</b>, zugleich <b>performant</b>
+                &nbsp; auf allen Ebenen!
             </>
         ),
     },
@@ -162,13 +166,16 @@ const skillCategories: SkillCategory[] = [
         skills: devopsSkills,
         description: (
             <>
-                Der gesamte <b>Weg von lokaler Spielwiese</b> bis hin zur
-                skalierten und <b>automatisierten Anwendung</b> fasziniert mich
-                tagtäglich auf&#39;s Neue.
+                Der Weg von <b>lokaler Spielwiese</b> bis hin zur&nbsp;
+                <b>automatisierten und skalierten Anwendung</b> fasziniert mich
+                täglich aufs Neue - Begriffe wie&nbsp;
+                <cite className="font-bold">Work&#39;s on my machine</cite> und
+                &nbsp;<cite>localhost</cite> gehören schon längst der
+                Vergangenheit an.
                 <br />
-                Das <b>Setup sowie die Integration</b>
-                &nbsp;von <b>(Open-Source)-Tooling&#39;s</b> runden das
-                Gesamtergebnis ab. <br /> <br />
+                Die Integration von weiterem Tooling rundet für mich das
+                Gesamtergebnis ab.
+                <br /> <br />
                 <code>#HätteManIn5MinutenManuellMachenKönnen #SelfHosted</code>
             </>
         ),

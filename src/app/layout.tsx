@@ -31,7 +31,7 @@ export async function generateMetadata(): Promise<Metadata> {
     return {
         title: "Dominik Baurecht",
         description:
-            "Full-Stack Software-Entwickler mit Fokus auf React, ASP.NET und Java bis hin zu DevOps - Dein Schweizer Taschenmesser unter den Entwicklern!",
+            "Full-Stack Software-Entwickler mit Fokus auf React, ASP.NET und Java bis hin zu DevOps",
     };
 }
 

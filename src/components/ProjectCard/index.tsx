@@ -35,7 +35,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
                     <div className="flex h-12 w-12 items-center justify-center rounded-lg skewed bg-white/50 text-gray-700 shadow-sm backdrop-blur-sm">
                         <div className="skewed-reverse">{icon}</div>
                     </div>
-                    <h3 className="font-black leading-tight">{title}</h3>
+                    <h3>{title}</h3>
                 </div>
                 {links?.length ? (
                     <div className="skewed-reverse flex gap-4">
