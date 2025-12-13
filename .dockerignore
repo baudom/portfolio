@@ -1,0 +1,16 @@
+Dockerfile
+.dockerignore
+node_modules
+npm-debug.log
+yarn-error.log
+.git
+.next
+.env*.local
+.DS_Store
+.idea
+.vscode
+README.md
+CHANGELOG.md
+compose.yml
+compose.template.yml
+ideas.md

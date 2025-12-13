@@ -1,0 +1,47 @@
+{
+  "branches": [
+    "main"
+  ],
+  "preset": "angular",
+  "plugins": [
+    [
+      "@semantic-release/commit-analyzer",
+      {
+        "preset": "angular",
+        "releaseRules": [
+          {
+            "type": "refactor",
+            "release": "minor"
+          },
+          {
+            "type": "imp",
+            "release": "minor"
+          },
+          {
+            "type": "build",
+            "release": "minor"
+          }
+        ]
+      }
+    ],
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/changelog",
+    [
+      "@semantic-release/npm",
+      {
+        "npmPublish": false
+      }
+    ],
+    [
+      "@semantic-release/git",
+      {
+        "assets": [
+          "CHANGELOG.md",
+          "package.json",
+          "compose.yml"
+        ]
+      }
+    ],
+    "@semantic-release/github"
+  ]
+}

@@ -1,0 +1,22 @@
+networks:
+  proxynet:
+    name: ${PROXY_NAME}
+    external: true
+
+services:
+  app:
+    container_name: {IMAGE_NAME}
+    image: {IMAGE_NAME}:{IMAGE_VERSION}
+    mem_limit: 512m
+    pull_policy: build
+    restart: always
+    env_file:
+      - .env
+      - stack.env
+    build:
+      context: .
+      tags:
+        - {IMAGE_NAME}:{IMAGE_VERSION}
+        - {IMAGE_NAME}:latest
+    networks:
+      - proxynet

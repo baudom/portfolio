@@ -23,8 +23,3 @@ yarn dev
 ```shell
 yarn build
 ```
-
-
-## Deployment
-
-> everything at its time ;)

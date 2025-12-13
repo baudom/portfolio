@@ -1,0 +1,31 @@
+name: Generate Release and trigger Deployment
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release:
+    name: Setup and Linting
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+      - name: Code Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Install Dependencies
+        run: yarn install
+      - name: Execute lint
+        run: yarn lint
+      - name: Verify docker build
+        run: docker build .
+      - name: Generate Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: yarn semantic-release
