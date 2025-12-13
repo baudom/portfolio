@@ -28,12 +28,82 @@ const serifFont = Serif({
 });
 
 export async function generateMetadata(): Promise<Metadata> {
+    const name = "Dominik Baurecht",
+        title = `Dominik Baurecht | Full-Stack Software Entwickler`,
+        description =
+            "Portfolio von Dominik Baurecht - Full-Stack Software-Entwickler aus Augsburg mit Fokus auf React, ASP.NET, Java und DevOps.",
+        descriptionShort =
+            "Portfolio von Dominik Baurecht - Full-Stack Entwicklung & DevOps.";
+
     return {
-        title: "Dominik Baurecht",
-        description:
-            "Full-Stack Software-Entwickler mit Fokus auf React, ASP.NET und Java bis hin zu DevOps",
+        metadataBase: new URL(process.env.NEXT_PUBLIC_URL),
+        title: {
+            default: title,
+            template: `%s | ${name}`, // for any other upcoming sub paths
+        },
+        description,
+        keywords: [
+            name,
+            "Full-Stack Developer",
+            "Software Entwickler",
+            "React",
+            "Next.js",
+            "TypeScript",
+            "C#",
+            ".NET",
+            "Java",
+            "Augsburg",
+            "Portfolio",
+            "Web Development",
+        ],
+        authors: [{ name }],
+        creator: name,
+        openGraph: {
+            type: "website",
+            locale: "de_DE",
+            url: "/",
+            title,
+            description,
+            siteName: `Portfolio von ${name}`,
+            images: [
+                {
+                    url: "/images/GalaxyAvatar.jpg",
+                    width: 1200,
+                    height: 630,
+                    alt: `Avatar von ${name}`,
+                },
+            ],
+        },
+        twitter: {
+            card: "summary_large_image",
+            title,
+            description: descriptionShort,
+            images: ["/images/GalaxyAvatar.jpg"],
+        },
+        icons: {
+            icon: "/images/GalaxyAvatar.jpg",
+            apple: "/images/GalaxyAvatar.jpg",
+        },
     };
 }
+
+const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Dominik Baurecht",
+    jobTitle: "Full-Stack Software Entwickler",
+    url: process.env.NEXT_PUBLIC_URL,
+    address: {
+        "@type": "PostalAddress",
+        addressLocality: "Augsburg",
+        addressRegion: "Bayern",
+        addressCountry: "DE",
+    },
+    sameAs: [
+        "https://github.com/baudom",
+        "https://de.linkedin.com/in/dominik-baurecht",
+    ],
+};
 
 const RootLayout: FC<WithChildren> = ({ children }) => {
     return (
@@ -47,6 +117,10 @@ const RootLayout: FC<WithChildren> = ({ children }) => {
             <body
                 className={`${sansFont.variable} ${monoFont.variable} ${serifFont.variable} antialiased`}
             >
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+                />
                 <main>{children}</main>
                 <Footer />
             </body>
