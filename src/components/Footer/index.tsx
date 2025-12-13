@@ -11,15 +11,6 @@ const Footer: FC = () => (
             </div>
             &middot;
             <Link
-                title="Impressum"
-                href="/impressum"
-                target="_self"
-            >
-                {/* TODO */}
-                Impressum
-            </Link>
-            &middot;
-            <Link
                 title="Kontakt"
                 href={ANCHOR_START}
                 target="_self"
