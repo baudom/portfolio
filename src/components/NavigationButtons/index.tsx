@@ -56,11 +56,11 @@ const NavigationButtons: FC = () => {
 
     return (
         <nav
-            className={`fixed transition-all duration-300 ease-in-out z-50 p-4 pb-2 lg:p-4 rounded-lg backdrop-blur-sm bg-white/10 ${
+            className={`fixed transition-all duration-300 ease-in-out z-50 p-4 pb-2 lg:p-4 rounded-lg backdrop-blur-sm bg-glass-panel ${
                 navShown
                     ? "opacity-100 -translate-x-1/2 lg:translate-x-0"
                     : "opacity-0 pointer-events-none -translate-x-1/2 translate-y-20 lg:translate-x-20 lg:translate-y-0"
-            } bottom-4 left-1/2 lg:left-auto lg:right-8`}
+            } bottom-4 lg:bottom-8 left-1/2 lg:left-auto lg:right-8`}
             aria-label="Navigation"
         >
             <div className="flex flex-row lg:flex-col gap-12 lg:gap-4">
@@ -76,7 +76,7 @@ const NavigationButtons: FC = () => {
                                 `flex items-center justify-center w-8 lg:w-12 h-8 lg:h-12 rounded-md transition-all duration-300 ease-in-out shadow-md group-hover:shadow-lg group-hover:scale-105 ` +
                                 (activeIdx === idx
                                     ? "bg-secondary text-white"
-                                    : "bg-white/20 text-gray-400 group-hover:bg-white/30")
+                                    : "bg-glass text-card-body group-hover:bg-glass-hover")
                             }
                         >
                             <link.icon />
@@ -85,7 +85,7 @@ const NavigationButtons: FC = () => {
                             className={`text-xs lg:hidden font-bold ${
                                 activeIdx === idx
                                     ? "text-secondary"
-                                    : "text-gray-400"
+                                    : "text-muted"
                             }`}
                         >
                             {link.title}

@@ -34,14 +34,14 @@ const ExperienceSection: FC = () => {
                                     } as CSSProperties
                                 }
                             >
-                                <Card className="relative overflow-hidden backdrop-blur-sm">
-                                    <div className="absolute -top-2.5 md:-top-3.5 -right-2 md:-right-3 text-5xl md:text-6xl font-black text-white/50 select-none pointer-events-none">
+                                <Card className="relative overflow-hidden">
+                                    <div className="absolute -top-2.5 md:-top-3.5 -right-2 md:-right-3 text-5xl md:text-6xl font-black text-watermark select-none pointer-events-none">
                                         {step.duration}
                                     </div>
 
                                     <div className="relative z-10 flex flex-col gap-4 p-2">
                                         <div className="skewed-reverse flex flex-col gap-1">
-                                            <div className="flex items-center gap-2 text-xs font-medium text-gray-600 uppercase tracking-widest">
+                                            <div className="flex items-center gap-2 text-xs font-medium text-card-body uppercase tracking-widest">
                                                 <span>{step.company}</span>
                                             </div>
 
@@ -58,7 +58,7 @@ const ExperienceSection: FC = () => {
                                                         className="text-secondary shrink-0"
                                                         size="1.25rem"
                                                     />
-                                                    <span className="text-sm md:text-base text-gray-600">
+                                                    <span className="text-sm md:text-base text-card-body">
                                                         {d}
                                                     </span>
                                                 </li>
@@ -67,8 +67,8 @@ const ExperienceSection: FC = () => {
 
                                         {/* TODO improve styling if needed someday */}
                                         {step.certificates?.length ? (
-                                            <div className="mt-4 border-t border-white/50">
-                                                <p className="skewed-reverse my-2 text-xs font-medium text-gray-600 uppercase tracking-widest">
+                                            <div className="mt-4 border-t border-glass">
+                                                <p className="skewed-reverse my-2 text-xs font-medium text-card-body uppercase tracking-widest">
                                                     Zertifikate
                                                 </p>
                                                 <div className="flex flex-wrap gap-2">
@@ -80,7 +80,7 @@ const ExperienceSection: FC = () => {
                                                             >
                                                                 <div
                                                                     className={cn(
-                                                                        "skewed px-2 py-1 rounded-md bg-gray-100 border text-gray-600",
+                                                                        "skewed px-2 py-1 rounded-md bg-tag border text-card-body",
                                                                     )}
                                                                 >
                                                                     <p className="skewed-reverse text-xs md:text-sm">

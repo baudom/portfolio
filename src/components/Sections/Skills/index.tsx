@@ -24,13 +24,13 @@ const SkillsSection: FC = () => {
                         <Card className="h-full relative overflow-hidden">
                             <DiagonalScroll skills={category.skills} />
                             <div className="flex flex-col h-full relative z-20 gap-2">
-                                <div className="skewed-reverse flex flex-row items-center gap-4 border-b border-white/50 pb-4">
-                                    <div className="flex h-12 w-12 items-center justify-center rounded-lg skewed bg-white/50 text-gray-700 shadow-sm backdrop-blur-sm">
+                                <div className="skewed-reverse flex flex-row items-center gap-4 border-b border-glass pb-4">
+                                    <div className="flex h-12 w-12 items-center justify-center rounded-lg skewed bg-glass text-card-highlight shadow-sm backdrop-blur-sm">
                                         <category.icon className="skewed-reverse" />
                                     </div>
                                     <div>
                                         <h3>{category.title}</h3>
-                                        <span className="text-xs font-medium uppercase tracking-wider text-gray-500">
+                                        <span className="text-xs font-medium uppercase tracking-wider text-muted">
                                             {category.headline}
                                         </span>
                                     </div>

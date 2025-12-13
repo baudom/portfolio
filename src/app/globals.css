@@ -27,12 +27,16 @@ body {
     }
 }
 
-h1 {
-    @apply text-5xl md:text-6xl;
-}
-
 h3 {
     @apply text-2xl font-black leading-tight text-black;
+}
+
+cite::before {
+    content: open-quote;
+}
+
+cite::after {
+    content: close-quote;
 }
 
 @keyframes wiggle {
@@ -54,6 +58,52 @@ h3 {
 }
 
 @layer utilities {
+    .text-card-heading {
+        @apply text-black;
+    }
+
+    .text-card-body {
+        @apply text-gray-600;
+    }
+
+    .text-muted {
+        @apply text-gray-500;
+    }
+
+    .text-card-highlight {
+        @apply text-gray-700;
+    }
+
+    .text-watermark {
+        @apply text-white/50;
+    }
+
+    /* Backgrounds */
+    .bg-glass {
+        @apply bg-white/30;
+    }
+
+    .bg-glass-hover {
+        @apply bg-white/60;
+    }
+
+    .bg-glass-panel {
+        @apply bg-white/10;
+    }
+
+    .bg-tag {
+        @apply bg-gray-100;
+    }
+
+    /* Borders */
+    .border-highlight {
+        @apply border-white;
+    }
+
+    .border-glass {
+        @apply border-white/40;
+    }
+
     .bg-secondary {
         background-color: var(--color-secondary);
     }

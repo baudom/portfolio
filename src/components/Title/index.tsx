@@ -31,7 +31,9 @@ const Title: FC<TitleProps> = ({ title, anchor, className, marginBottom }) => {
                 href={anchor}
                 target="_self"
             >
-                <h1 className="font-black tracking-wider uppercase">{title}</h1>
+                <h2 className="text-5xl md:text-6xl font-black tracking-wider uppercase">
+                    {title}
+                </h2>
             </Link>
         </div>
     );

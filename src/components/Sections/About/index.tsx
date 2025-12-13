@@ -11,24 +11,24 @@ import Card from "@/components/Card";
 
 const AboutSection: FC = () => (
     <SectionContainer id={ANCHOR_START}>
-        <Card className="overflow-hidden backdrop-blur-sm">
+        <Card className="overflow-hidden">
             <div className="flex flex-col-reverse md:flex-row gap-2 md:gap-16 items-center md:items-start">
                 <div className="flex flex-1 flex-col justify-between text-center md:text-start gap-8">
                     <div className="skewed-reverse flex flex-col gap-2">
-                        <h1 className="text-4xl md:text-6xl font-black text-black leading-tight">
+                        <h1 className="text-4xl md:text-6xl font-black text-card-heading leading-tight">
                             Dominik Baurecht
                         </h1>
-                        <h2 className="text-lg md:text-2xl font-bold text-gray-600 uppercase tracking-wider">
+                        <h2 className="text-lg md:text-2xl font-bold text-card-body uppercase tracking-wider">
                             Full-Stack Software Entwickler
                         </h2>
-                        <cite className="text-gray-500">
-                            &quot;Probably centering your div&quot;
+                        <cite className="text-muted">
+                            Probably centering your div
                         </cite>
                     </div>
 
                     <div className="skewed-reverse flex flex-col items-center md:items-start gap-6">
                         <div className="flex flex-col gap-2 items-center md:items-start">
-                            <span className="flex items-center gap-2 text-gray-700 font-semibold">
+                            <span className="flex items-center gap-2 text-card-highlight font-semibold">
                                 <IconMapPin />
                                 <p>Augsburg, Bayern</p>
                             </span>
@@ -65,7 +65,7 @@ const AboutSection: FC = () => (
                         <p className="z-10 absolute motion-safe:animate-[wiggle_2s_infinite] -top-8 -left-8 text-7xl">
                             &#128075;
                         </p>
-                        <div className="overflow-hidden rounded-lg border-4 border-white shadow-2xl">
+                        <div className="overflow-hidden rounded-lg border-4 border-highlight shadow-2xl">
                             <Image
                                 alt="Avatar von Dominik Baurecht"
                                 src="/images/GalaxyAvatar.jpg"
