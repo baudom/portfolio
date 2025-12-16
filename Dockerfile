@@ -10,12 +10,20 @@ WORKDIR /app
 COPY package.json yarn.lock ./
 RUN yarn install --frozen-lockfile --network-timeout 9999999
 
-
 # Rebuild the source code only when needed
 FROM base AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
+
+ARG NEXT_PUBLIC_CONTACT_MAIL
+ENV NEXT_PUBLIC_CONTACT_MAIL=${NEXT_PUBLIC_CONTACT_MAIL}
+
+ARG TRACKING_API_HOST
+ENV TRACKING_API_HOST=${TRACKING_API_HOST}
+
+ARG TRACKING_API_KEY
+ENV TRACKING_API_KEY=${TRACKING_API_KEY}
 
 # Next.js collects completely anonymous telemetry data about general usage.
 # Learn more here: https://nextjs.org/telemetry

@@ -113,6 +113,12 @@ const RootLayout: FC<WithChildren> = ({ children }) => {
                     name="theme-color"
                     content="#283C5F"
                 />
+                <script
+                    defer
+                    src={process.env.TRACKING_API_HOST}
+                    data-website-id={process.env.TRACKING_API_KEY}
+                    data-auto-track="true"
+                />
             </head>
             <body
                 className={`${sansFont.variable} ${monoFont.variable} ${serifFont.variable} antialiased`}

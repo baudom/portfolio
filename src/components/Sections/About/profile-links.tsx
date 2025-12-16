@@ -26,7 +26,7 @@ const profileLinks: ProfileLink[] = [
     {
         icon: IconMail,
         name: "Kontakt",
-        href: "mailto:info@baudom.de",
+        href: `mailto:${process.env.NEXT_PUBLIC_CONTACT_MAIL}`,
     },
 ];
 

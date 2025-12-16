@@ -5,9 +5,10 @@ import {
     IconBrandCSharp,
     IconCloud,
     IconDeviceDesktop,
+    IconProps,
     IconServer,
 } from "@tabler/icons-react";
-import { ReactElement } from "react";
+import { ForwardRefExoticComponent, ReactElement } from "react";
 import {
     IconType,
     SiCypress,
@@ -71,7 +72,7 @@ import {
 } from "@/types/tag";
 
 export type SkillCategory = {
-    icon: IconType;
+    icon: ForwardRefExoticComponent<IconProps> | IconType;
     title: string;
     headline: string;
     skills: BrandTagType[];
@@ -151,11 +152,11 @@ const skillCategories: SkillCategory[] = [
         skills: backendSkills,
         description: (
             <>
-                <b>Wie es unter der Haube aussieht?</b> - Interessiert mich
-                nicht nur bei Autos! Gerade in der Backend-Entwicklung sehe ich
-                die <b>Herausforderung in Spezial-Logik</b> für&nbsp;
+                <b>Wie es unter der Haube aussieht?</b> Gerade in der
+                Backend-Entwicklung sehe ich die&nbsp;
+                <b>Herausforderung in Spezial-Logik</b> für&nbsp;
                 <b>individuelle Anwendungsfälle</b>, zugleich <b>performant</b>
-                &nbsp; auf allen Ebenen!
+                &nbsp;auf allen Ebenen!
             </>
         ),
     },
@@ -173,7 +174,7 @@ const skillCategories: SkillCategory[] = [
                 &nbsp;<cite>localhost</cite> gehören schon längst der
                 Vergangenheit an.
                 <br />
-                Die Integration von weiterem Tooling rundet für mich das
+                Die <b>Integration von weiterem Tooling</b> rundet für mich das
                 Gesamtergebnis ab.
                 <br /> <br />
                 <code>#HätteManIn5MinutenManuellMachenKönnen #SelfHosted</code>
