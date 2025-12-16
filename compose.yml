@@ -1,0 +1,23 @@
+networks:
+  proxynet:
+    name: ${PROXY_NAME}
+    external: true
+
+services:
+  app:
+    container_name: portfolio
+    image: portfolio:1.0.0
+    mem_limit: 512m
+    pull_policy: build
+    restart: always
+    build:
+      context: .
+      args:
+        NEXT_PUBLIC_CONTACT_MAIL: ${NEXT_PUBLIC_CONTACT_MAIL}
+        TRACKING_API_HOST: ${TRACKING_API_HOST}
+        TRACKING_API_KEY: ${TRACKING_API_KEY}
+      tags:
+        - portfolio:1.0.0
+        - portfolio:latest
+    networks:
+      - proxynet
