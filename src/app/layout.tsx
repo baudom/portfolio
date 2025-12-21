@@ -113,6 +113,7 @@ const RootLayout: FC<WithChildren> = ({ children }) => {
                     name="theme-color"
                     content="#283C5F"
                 />
+                <meta name="google-site-verification" content="JBdXXNbmm6hJtSinX04PadGHcmkjxjt9-BtMrPGivDk" />
                 <script
                     defer
                     src={process.env.TRACKING_API_HOST}
