@@ -11,15 +11,15 @@
         "releaseRules": [
           {
             "type": "refactor",
-            "release": "minor"
+            "release": "patch"
           },
           {
             "type": "imp",
-            "release": "minor"
+            "release": "patch"
           },
           {
             "type": "build",
-            "release": "minor"
+            "release": "patch"
           }
         ]
       }

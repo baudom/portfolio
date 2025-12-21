@@ -5,5 +5,6 @@ declare namespace NodeJS {
         NEXT_PUBLIC_CONTACT_MAIL: string;
         NEXT_PUBLIC_VERSION: string;
         NEXT_PUBLIC_URL: string;
+        GOOGLE_VERIFICATION_KEY: string;
     }
 }
