@@ -3,6 +3,7 @@
 import { FC, useEffect, useState } from "react";
 import quickLinks from "@/utils/quick-links";
 import { ANCHOR_START } from "@/utils/anchor";
+import { buildTrackingProps } from "@/types/tracking";
 
 // minimum percentage threshold a section needs to be visible
 const VISIBILITY_THRESHOLD = 0.5;
@@ -66,6 +67,7 @@ const NavigationButtons: FC = () => {
             <div className="flex flex-row lg:flex-col gap-12 lg:gap-4">
                 {quickLinks.map((link, idx) => (
                     <a
+                        {...buildTrackingProps(`Navigation > ${link.title}`)}
                         key={link.title}
                         href={link.anchor}
                         className="flex flex-col items-center gap-1 group"

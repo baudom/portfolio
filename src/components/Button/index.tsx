@@ -4,17 +4,20 @@ import { BASE_ANIMATIONS } from "@/utils/animations";
 import { cn } from "@/utils/tailwind";
 import Link from "@/components/Link";
 import { WithChildren, WithClassName } from "@/types/react";
+import { WithTrackId } from "@/types/tracking";
 
 type ButtonProps = WithChildren &
+    WithTrackId &
     WithClassName & {
         href: string;
     };
 
-const Button: FC<ButtonProps> = ({ href, className, children }) => {
+const Button: FC<ButtonProps> = ({ href, className, trackId, children }) => {
     return (
         <Link
             href={href}
             target="_self"
+            trackId={trackId}
             className={cn(
                 BASE_ANIMATIONS,
                 classes.animated,
