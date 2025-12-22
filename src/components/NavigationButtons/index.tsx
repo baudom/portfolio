@@ -3,6 +3,7 @@
 import { FC, useEffect, useState } from "react";
 import quickLinks from "@/utils/quick-links";
 import { ANCHOR_START } from "@/utils/anchor";
+import { buildTrackingProps, trackEvent } from "@/types/tracking";
 
 // minimum percentage threshold a section needs to be visible
 const VISIBILITY_THRESHOLD = 0.5;
@@ -10,6 +11,18 @@ const VISIBILITY_THRESHOLD = 0.5;
 const NavigationButtons: FC = () => {
     const [navShown, setNavShown] = useState(false);
     const [activeIdx, setActiveIdx] = useState<number | null>(null);
+
+    useEffect(() => {
+        const timeout = setTimeout(() => {
+            if (activeIdx != null) {
+                trackEvent("VIEWED_SECTION", {
+                    section: quickLinks[activeIdx].title,
+                });
+            }
+        }, 1000);
+
+        return () => clearTimeout(timeout);
+    }, [activeIdx]);
 
     useEffect(() => {
         const sections = Array.from(document.querySelectorAll("section[id]"));
@@ -67,6 +80,13 @@ const NavigationButtons: FC = () => {
                 {quickLinks.map((link, idx) => (
                     <a
                         key={link.title}
+                        {...buildTrackingProps({
+                            trackId: "NAVIGATE_TO_SECTION",
+                            properties: {
+                                source: "NAVIGATION",
+                                target: link.title,
+                            },
+                        })}
                         href={link.anchor}
                         className="flex flex-col items-center gap-1 group"
                         aria-current={activeIdx === idx ? "page" : undefined}

@@ -1,8 +1,10 @@
 import { FC, HTMLAttributeAnchorTarget } from "react";
 import { WithChildren, WithClassName, WithOnClick } from "@/types/react";
+import { buildTrackingProps, WithTrackingProps } from "@/types/tracking";
 
 type LinkProps = WithChildren &
     WithOnClick &
+    WithTrackingProps &
     WithClassName & {
         title?: string;
         href: string;
@@ -16,8 +18,10 @@ const Link: FC<LinkProps> = ({
     target = "_blank",
     className,
     children,
+    tracking,
 }) => (
     <a
+        {...buildTrackingProps(tracking)}
         title={title}
         href={href}
         target={target}
