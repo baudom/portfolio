@@ -1,5 +1,23 @@
-export type WithTrackId = {
-    trackId?: string;
+declare global {
+    interface Window {
+        umami?: {
+            track: (evName: string, evData?: Record<string, string>) => void;
+        };
+    }
+}
+
+export type TrackingIdType =
+    | "NAVIGATE_TO_SECTION"
+    | "VIEWED_SECTION"
+    | "OPEN_EXTERNAL_LINK";
+
+export type TrackingPropsType = {
+    trackId?: TrackingIdType;
+    properties?: Record<string, string>;
+};
+
+export type WithTrackingProps = {
+    tracking?: TrackingPropsType;
 };
 
 export type TrackingReturnType =
@@ -7,17 +25,26 @@ export type TrackingReturnType =
     | undefined;
 
 export const buildTrackingProps = (
-    trackId?: string,
-    properties?: Record<string, string>,
+    props?: TrackingPropsType,
 ): TrackingReturnType => {
-    if (!trackId) return undefined;
+    if (!props?.trackId) return undefined;
 
     const keyPrefix = "data-umami-event";
     return {
-        [keyPrefix]: trackId,
-        ...Object.entries(properties ?? {}).map(([key, value]) => ({
-            [`${keyPrefix}-${key}`]: value, // will result in "data-umami-event-<key>": "value"
-            // https://umami.is/docs/track-events#using-data-attributes > additional properties
-        })),
+        [keyPrefix]: props.trackId,
+        ...Object.entries(props.properties ?? {})
+            .map(([key, value]) => ({
+                [`${keyPrefix}-${key}`]: value,
+            }))
+            .reduce((prev, cur) => ({ ...prev, ...cur }), {}),
     };
+};
+
+export const trackEvent = (
+    eventName: TrackingIdType,
+    eventData?: Record<string, string>,
+) => {
+    if (typeof window !== "undefined" && window.umami) {
+        window.umami.track(eventName, eventData);
+    }
 };

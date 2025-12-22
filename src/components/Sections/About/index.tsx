@@ -35,7 +35,13 @@ const AboutSection: FC = () => (
                             <div className="flex items-center gap-4">
                                 {profileLinks.map((link) => (
                                     <IconButton
-                                        trackId={`About > Icon > ${link.name}`}
+                                        tracking={{
+                                            trackId: "OPEN_EXTERNAL_LINK",
+                                            properties: {
+                                                source: "ABOUT",
+                                                target: link.name,
+                                            },
+                                        }}
                                         key={link.name}
                                         {...link}
                                     >
@@ -50,7 +56,13 @@ const AboutSection: FC = () => (
                                 <Button
                                     key={a.title}
                                     href={a.anchor}
-                                    trackId={`About > Button > ${a.title}`}
+                                    tracking={{
+                                        trackId: "NAVIGATE_TO_SECTION",
+                                        properties: {
+                                            section: a.title,
+                                            source: "ABOUT",
+                                        },
+                                    }}
                                 >
                                     <span className="flex items-center gap-2">
                                         <a.icon size="1.25rem" />

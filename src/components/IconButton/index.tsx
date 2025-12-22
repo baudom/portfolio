@@ -3,11 +3,11 @@ import { BASE_ANIMATIONS } from "@/utils/animations";
 import Link from "@/components/Link";
 import { WithChildren, WithClassName, WithOnClick } from "@/types/react";
 import { cn } from "@/utils/tailwind";
-import { buildTrackingProps, WithTrackId } from "@/types/tracking";
+import { buildTrackingProps, WithTrackingProps } from "@/types/tracking";
 
 type IconButtonProps = WithChildren &
     WithOnClick &
-    WithTrackId &
+    WithTrackingProps &
     WithClassName & {
         name: string;
         href?: string;
@@ -19,12 +19,12 @@ const IconButton: FC<IconButtonProps> = ({
     onClick,
     className,
     children,
-    trackId,
+    tracking,
 }) => {
     if (href) {
         return (
             <Link
-                trackId={trackId}
+                tracking={tracking}
                 title={name}
                 href={href}
                 className={cn(BASE_ANIMATIONS, className)}
@@ -37,7 +37,7 @@ const IconButton: FC<IconButtonProps> = ({
 
     return (
         <button
-            {...buildTrackingProps(trackId)}
+            {...buildTrackingProps(tracking)}
             title={name}
             className={cn(BASE_ANIMATIONS, className)}
             onClick={onClick}

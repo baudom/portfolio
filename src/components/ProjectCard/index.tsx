@@ -41,7 +41,13 @@ const ProjectCard: FC<ProjectCardProps> = ({
                     <div className="skewed-reverse flex gap-4">
                         {links.map((link) => (
                             <IconButton
-                                trackId={`ProjectCard > ${title} > Icon > ${link.title}`}
+                                tracking={{
+                                    trackId: "OPEN_EXTERNAL_LINK",
+                                    properties: {
+                                        source: "PROJECT_CARD",
+                                        target: link.href,
+                                    },
+                                }}
                                 key={link.title}
                                 name={link.title}
                                 href={link.href}
