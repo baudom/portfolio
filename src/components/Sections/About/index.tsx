@@ -65,7 +65,7 @@ const AboutSection: FC = () => (
                         <p className="z-10 absolute motion-safe:animate-[wiggle_2s_infinite] -top-8 -left-8 text-7xl">
                             &#128075;
                         </p>
-                        <div className="overflow-hidden rounded-lg border-4 border-highlight shadow-2xl">
+                        <div className="overflow-hidden rounded-xl border-4 border-highlight shadow-2xl">
                             <Image
                                 alt="Avatar von Dominik Baurecht"
                                 src="/images/GalaxyAvatar.jpg"

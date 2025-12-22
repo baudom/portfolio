@@ -32,7 +32,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
         <Card className={cn("flex flex-col md:h-full", className)}>
             <div className="flex justify-between">
                 <div className="skewed-reverse text-card-heading flex items-center gap-2">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-lg skewed bg-glass text-card-highlight shadow-sm backdrop-blur-sm">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl skewed bg-glass text-card-highlight shadow-sm backdrop-blur-sm">
                         <div className="skewed-reverse">{icon}</div>
                     </div>
                     <h3>{title}</h3>
@@ -62,7 +62,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
                                 key={t.name}
                                 className="skewed-reverse"
                             >
-                                <div className="skewed px-2 py-1 rounded-md bg-tag flex items-center gap-2 select-none">
+                                <div className="skewed px-2 py-1 rounded-xl bg-tag flex items-center gap-2 select-none">
                                     <t.icon
                                         size="1.25rem"
                                         className="skewed-reverse"

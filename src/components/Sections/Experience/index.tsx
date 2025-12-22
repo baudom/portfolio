@@ -80,7 +80,7 @@ const ExperienceSection: FC = () => {
                                                             >
                                                                 <div
                                                                     className={cn(
-                                                                        "skewed px-2 py-1 rounded-md bg-tag border text-card-body",
+                                                                        "skewed px-2 py-1 rounded-xl bg-tag border text-card-body",
                                                                     )}
                                                                 >
                                                                     <p className="skewed-reverse text-xs md:text-sm">
