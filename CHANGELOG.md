@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/baudom/portfolio/compare/v1.0.0...v1.1.0) (2025-12-22)
+
+
+### Bug Fixes
+
+* temporary disable tracking ([e2dc84f](https://github.com/baudom/portfolio/commit/e2dc84fc23b8753a26c1d6d80b8bcba2f5b249f7))
+
 # 1.0.0 (2025-12-16)
 
 
