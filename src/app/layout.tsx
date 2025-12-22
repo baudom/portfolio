@@ -80,10 +80,6 @@ export async function generateMetadata(): Promise<Metadata> {
             description: descriptionShort,
             images: ["/images/GalaxyAvatar.jpg"],
         },
-        icons: {
-            icon: "/images/GalaxyAvatar.jpg",
-            apple: "/images/GalaxyAvatar.jpg",
-        },
     };
 }
 
