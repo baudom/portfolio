@@ -44,7 +44,7 @@ const Carousel: FC<CarouselProps> = ({ children, options }) => {
         (direction: "left" | "right", label: string, onClick: () => void) => (
             <IconButton
                 name={label}
-                className={`${direction === "left" ? "mr-1 md:mr-2" : "ml-1 md:ml-2"} p-1 skewed rounded-lg hover:bg-foreground hover:text-background`}
+                className={`${direction === "left" ? "mr-1 md:mr-2" : "ml-1 md:ml-2"} p-1 skewed rounded-xl hover:bg-foreground hover:text-background`}
                 onClick={onClick}
             >
                 {createElement(
