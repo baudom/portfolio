@@ -70,6 +70,8 @@ const NavigationButtons: FC = () => {
                         href={link.anchor}
                         className="flex flex-col items-center gap-1 group"
                         aria-current={activeIdx === idx ? "page" : undefined}
+                        title={link.title}
+                        aria-label={link.title}
                     >
                         <div
                             className={

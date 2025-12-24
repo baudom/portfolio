@@ -1,7 +1,7 @@
 {
     "name": "portfolio",
     "version": "1.0.1",
-    "homepage": "www.baudom.de",
+    "homepage": "https://www.baudom.de",
     "scripts": {
         "dev": "next dev",
         "build": "next build",

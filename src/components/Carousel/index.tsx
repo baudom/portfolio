@@ -88,6 +88,7 @@ const Carousel: FC<CarouselProps> = ({ children, options }) => {
                                 ? styles["embla__dot--selected"]
                                 : "",
                         )}
+                        tabIndex={-1}
                         aria-label={`Karte ${index + 1} auswählen`}
                     />
                 ))}
