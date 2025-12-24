@@ -8,6 +8,7 @@ import "./globals.css";
 import { FC } from "react";
 import Footer from "@/components/Footer";
 import { WithChildren } from "@/types/react";
+import quickLinks from "@/utils/quick-links";
 
 const sansFont = Sans({
     subsets: ["latin"],
@@ -101,6 +102,17 @@ const jsonLd = {
     ],
 };
 
+const itemListJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: quickLinks.slice(1).map((link, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name: link.title,
+        url: process.env.NEXT_PUBLIC_URL + link.anchor,
+    })),
+};
+
 const RootLayout: FC<WithChildren> = ({ children }) => {
     return (
         <html lang="de">
@@ -125,7 +137,9 @@ const RootLayout: FC<WithChildren> = ({ children }) => {
             >
                 <script
                     type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify([jsonLd, itemListJsonLd]),
+                    }}
                 />
                 <main>{children}</main>
                 <Footer />
