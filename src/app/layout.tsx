@@ -129,7 +129,7 @@ const RootLayout: FC<WithChildren> = ({ children }) => {
                     defer
                     src={process.env.TRACKING_API_HOST}
                     data-website-id={process.env.TRACKING_API_KEY}
-                    data-auto-track="false"
+                    data-auto-track={process.env.AUTO_TRACK_ENABLED ?? "false"}
                 />
             </head>
             <body
