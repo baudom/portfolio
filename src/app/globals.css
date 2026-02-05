@@ -3,120 +3,120 @@
 @tailwind utilities;
 
 :root {
-    --background: #283C5F;
-    --foreground: #DDD;
-    --color-secondary: #FF8C00;
+  --background: #283c5f;
+  --foreground: #ddd;
+  --color-secondary: #ff8c00;
 
-    --border-color: var(--foreground);
+  --border-color: var(--foreground);
 
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    color: var(--foreground);
-    background: var(--background);
-    @apply font-sans text-base;
+  color: var(--foreground);
+  background: var(--background);
+  @apply font-sans text-base;
 
-    main {
-        overflow: hidden;
+  main {
+    overflow: hidden;
 
-        ::selection {
-            background: none;
-            text-shadow: 1px 1px 2px var(--color-secondary);
-        }
+    ::selection {
+      background: none;
+      text-shadow: 1px 1px 2px var(--color-secondary);
     }
+  }
 }
 
 h3 {
-    @apply text-2xl font-black leading-tight text-black;
+  @apply text-2xl font-black leading-tight text-black;
 }
 
 cite::before {
-    content: open-quote;
+  content: open-quote;
 }
 
 cite::after {
-    content: close-quote;
+  content: close-quote;
 }
 
 @keyframes wiggle {
-    40% {
-        transform: rotate(0deg);
-    }
-    45% {
-        transform: rotate(0deg);
-    }
-    50% {
-        transform: rotate(5deg);
-    }
-    55% {
-        transform: rotate(-5deg);
-    }
-    60% {
-        transform: rotate(0deg);
-    }
+  40% {
+    transform: rotate(0deg);
+  }
+  45% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  55% {
+    transform: rotate(-5deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
 }
 
 @layer utilities {
-    .text-card-heading {
-        @apply text-black;
-    }
+  .text-card-heading {
+    @apply text-black;
+  }
 
-    .text-card-body {
-        @apply text-gray-600;
-    }
+  .text-card-body {
+    @apply text-gray-600;
+  }
 
-    .text-muted {
-        @apply text-gray-500;
-    }
+  .text-muted {
+    @apply text-gray-500;
+  }
 
-    .text-card-highlight {
-        @apply text-gray-700;
-    }
+  .text-card-highlight {
+    @apply text-gray-700;
+  }
 
-    .text-watermark {
-        @apply text-white/50;
-    }
+  .text-watermark {
+    @apply text-white/50;
+  }
 
-    /* Backgrounds */
-    .bg-glass {
-        @apply bg-white/30;
-    }
+  /* Backgrounds */
+  .bg-glass {
+    @apply bg-white/30;
+  }
 
-    .bg-glass-hover {
-        @apply bg-white/60;
-    }
+  .bg-glass-hover {
+    @apply bg-white/60;
+  }
 
-    .bg-glass-panel {
-        @apply bg-white/10;
-    }
+  .bg-glass-panel {
+    @apply bg-white/10;
+  }
 
-    .bg-tag {
-        @apply bg-gray-100;
-    }
+  .bg-tag {
+    @apply bg-gray-100;
+  }
 
-    /* Borders */
-    .border-highlight {
-        @apply border-white;
-    }
+  /* Borders */
+  .border-highlight {
+    @apply border-white;
+  }
 
-    .border-glass {
-        @apply border-white/40;
-    }
+  .border-glass {
+    @apply border-white/40;
+  }
 
-    .bg-secondary {
-        background-color: var(--color-secondary);
-    }
+  .bg-secondary {
+    background-color: var(--color-secondary);
+  }
 
-    .text-secondary {
-        color: var(--color-secondary);
-    }
+  .text-secondary {
+    color: var(--color-secondary);
+  }
 
-    .skewed {
-        @apply skew-x-1 md:skew-x-3;
-    }
+  .skewed {
+    @apply skew-x-1 md:skew-x-3;
+  }
 
-    .skewed-reverse {
-        @apply -skew-x-1 md:-skew-x-3;
-    }
+  .skewed-reverse {
+    @apply -skew-x-1 md:-skew-x-3;
+  }
 }

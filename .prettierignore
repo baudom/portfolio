@@ -12,3 +12,8 @@ build
 CHANGELOG.md
 
 .github
+
+# docker
+
+compose.template.yml
+compose.yml

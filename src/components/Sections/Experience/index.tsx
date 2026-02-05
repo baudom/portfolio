@@ -5,103 +5,102 @@ import workingSteps from "./workingSteps";
 import Card from "@/components/Card";
 import { IconCheck } from "@tabler/icons-react";
 import { cn } from "@/utils/tailwind";
+import Reveal from "@/components/Reveal";
 
 const ExperienceSection: FC = () => {
-    return (
-        <SectionContainer
-            id={ANCHOR_EXPERIENCE}
-            title={{
-                title: "Erfahrung",
-                anchor: ANCHOR_EXPERIENCE,
-                marginBottom: "medium",
-            }}
-        >
-            <div className="relative flex flex-col">
-                <div className="flex w-full flex-col gap-8 md:gap-16">
-                    {workingSteps.map((step, index) => {
-                        return (
-                            <div
-                                key={step.title}
-                                className={
-                                    "relative flex flex-col w-full md:max-w-[40vw] ml-0 md:ml-[var(--step-margin)]"
-                                }
-                                style={
-                                    {
-                                        "--step-margin":
-                                            workingSteps.length > 1
-                                                ? `calc((100% - 40vw) * ${index / (workingSteps.length - 1)})`
-                                                : "0px",
-                                    } as CSSProperties
-                                }
-                            >
-                                <Card className="relative overflow-hidden">
-                                    <div className="absolute -top-2.5 md:-top-3.5 -right-2 md:-right-3 text-5xl md:text-6xl font-black text-watermark select-none pointer-events-none">
-                                        {step.duration}
-                                    </div>
+  return (
+    <SectionContainer
+      id={ANCHOR_EXPERIENCE}
+      title={{
+        title: "Erfahrung",
+        anchor: ANCHOR_EXPERIENCE,
+        marginBottom: "medium",
+      }}
+    >
+      <div className="relative flex flex-col">
+        <div className="flex w-full flex-col gap-8 md:gap-16">
+          {workingSteps.map((step, index) => {
+            return (
+              <div
+                key={step.title}
+                className="relative flex flex-col w-full md:max-w-[40vw] ml-0 md:ml-[var(--step-margin)]"
+                style={
+                  {
+                    "--step-margin":
+                      workingSteps.length > 1
+                        ? `calc((100% - 40vw) * ${index / (workingSteps.length - 1)})`
+                        : "0px",
+                  } as CSSProperties
+                }
+              >
+                <Reveal delay={index * 200}>
+                  <Card className="relative overflow-hidden">
+                    <div className="absolute -top-2.5 md:-top-3.5 -right-2 md:-right-3 text-5xl md:text-6xl font-black text-watermark select-none pointer-events-none">
+                      {step.duration}
+                    </div>
 
-                                    <div className="relative z-10 flex flex-col gap-4 p-2">
-                                        <div className="skewed-reverse flex flex-col gap-1">
-                                            <div className="flex items-center gap-2 text-xs font-medium text-card-body uppercase tracking-widest">
-                                                <span>{step.company}</span>
-                                            </div>
+                    <div className="relative z-10 flex flex-col gap-4 p-2">
+                      <div className="skewed-reverse flex flex-col gap-1">
+                        <div className="flex items-center gap-2 text-xs font-medium text-card-body uppercase tracking-widest">
+                          <span>{step.company}</span>
+                        </div>
 
-                                            <h3>{step.title}</h3>
-                                        </div>
+                        <h3>{step.title}</h3>
+                      </div>
 
-                                        <ul className="flex flex-col gap-2">
-                                            {step.descriptions.map((d) => (
-                                                <li
-                                                    key={d.key}
-                                                    className="skewed-reverse flex items-center gap-2"
-                                                >
-                                                    <IconCheck
-                                                        className="text-secondary shrink-0"
-                                                        size="1.25rem"
-                                                    />
-                                                    <span className="text-sm md:text-base text-card-body">
-                                                        {d}
-                                                    </span>
-                                                </li>
-                                            ))}
-                                        </ul>
+                      <ul className="flex flex-col gap-2">
+                        {step.descriptions.map((d) => (
+                          <li
+                            key={d.key}
+                            className="skewed-reverse flex items-center gap-2"
+                          >
+                            <IconCheck
+                              className="text-secondary shrink-0"
+                              size="1.25rem"
+                            />
+                            <span className="text-sm md:text-base text-card-body">
+                              {d}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
 
-                                        {/* TODO improve styling if needed someday */}
-                                        {step.certificates?.length ? (
-                                            <div className="mt-4 border-t border-glass">
-                                                <p className="skewed-reverse my-2 text-xs font-medium text-card-body uppercase tracking-widest">
-                                                    Zertifikate
-                                                </p>
-                                                <div className="flex flex-wrap gap-2">
-                                                    {step.certificates.map(
-                                                        (c) => (
-                                                            <div
-                                                                key={c.name}
-                                                                className="skewed-reverse"
-                                                            >
-                                                                <div
-                                                                    className={cn(
-                                                                        "skewed px-2 py-1 rounded-xl bg-tag border text-card-body",
-                                                                    )}
-                                                                >
-                                                                    <p className="skewed-reverse text-xs md:text-sm">
-                                                                        {c.name}
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                        ),
-                                                    )}
-                                                </div>
-                                            </div>
-                                        ) : null}
-                                    </div>
-                                </Card>
-                            </div>
-                        );
-                    })}
-                </div>
-            </div>
-        </SectionContainer>
-    );
+                      {/* TODO improve styling if needed someday */}
+                      {step.certificates?.length ? (
+                        <div className="mt-4 border-t border-glass">
+                          <p className="skewed-reverse my-2 text-xs font-medium text-card-body uppercase tracking-widest">
+                            Zertifikate
+                          </p>
+                          <div className="flex flex-wrap gap-2">
+                            {step.certificates.map((c) => (
+                              <div
+                                key={c.name}
+                                className="skewed-reverse"
+                              >
+                                <div
+                                  className={cn(
+                                    "skewed px-2 py-1 rounded-xl bg-tag border text-card-body",
+                                  )}
+                                >
+                                  <p className="skewed-reverse text-xs md:text-sm">
+                                    {c.name}
+                                  </p>
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      ) : null}
+                    </div>
+                  </Card>
+                </Reveal>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </SectionContainer>
+  );
 };
 
 export default ExperienceSection;

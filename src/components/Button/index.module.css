@@ -1,17 +1,17 @@
 .animated {
-    @apply relative overflow-hidden;
+  @apply relative overflow-hidden;
 
+  &:after {
+    @apply absolute bg-foreground h-32 w-8 -top-16 -left-16 opacity-40;
+    content: "";
+    transform: rotate(35deg);
+    transition: all 750ms cubic-bezier(0.15, 1, 0.15, 1);
+  }
+
+  &:hover {
     &:after {
-        @apply absolute bg-foreground h-32 w-8 -top-16 -left-16 opacity-40;
-        content: "";
-        transform: rotate(35deg);
-        transition: all 750ms cubic-bezier(0.15, 1, 0.15, 1);
+      left: 125%;
+      transition: all 750ms cubic-bezier(0.15, 1, 0.15, 1);
     }
-
-    &:hover {
-        &:after {
-            left: 125%;
-            transition: all 750ms cubic-bezier(0.15, 1, 0.15, 1);
-        }
-    }
+  }
 }

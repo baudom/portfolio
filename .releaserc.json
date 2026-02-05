@@ -1,7 +1,5 @@
 {
-  "branches": [
-    "main"
-  ],
+  "branches": ["main"],
   "preset": "angular",
   "plugins": [
     [
@@ -32,23 +30,23 @@
           "types": [
             {
               "type": "feat",
-              "section": "Features"
+              "section": "🚀 Features"
             },
             {
               "type": "fix",
-              "section": "Bug Fixes"
+              "section": "🐞 Bug Fixes"
             },
             {
               "type": "refactor",
-              "section": "Refactoring"
+              "section": "⚒️ Refactoring"
             },
             {
               "type": "imp",
-              "section": "Improvements"
+              "section": "💡 Improvements"
             },
             {
               "type": "build",
-              "section": "Build System"
+              "section": "🏗️ Build System"
             }
           ]
         }
@@ -64,11 +62,7 @@
     [
       "@semantic-release/git",
       {
-        "assets": [
-          "CHANGELOG.md",
-          "package.json",
-          "compose.yml"
-        ]
+        "assets": ["CHANGELOG.md", "package.json", "compose.yml"]
       }
     ],
     "@semantic-release/github"
