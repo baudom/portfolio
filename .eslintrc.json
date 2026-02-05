@@ -6,11 +6,7 @@
         "next/typescript",
         "plugin:react-hooks/recommended"
     ],
-    "ignorePatterns": [
-        ".next/*",
-        "node_modules/*",
-        "build/*"
-    ],
+    "ignorePatterns": [".next/*", "node_modules/*", "build/*"],
     "plugins": ["prettier", "react-hooks"],
     "rules": {
         "prettier/prettier": "error",
