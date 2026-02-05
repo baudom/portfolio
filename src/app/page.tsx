@@ -6,13 +6,13 @@ import ProjectsSection from "@/components/Sections/Projects";
 import NavigationButtons from "@/components/NavigationButtons";
 
 const Page: FC = () => (
-    <div className="flex flex-col gap-12">
-        <AboutSection />
-        <SkillsSection />
-        <ExperienceSection />
-        <ProjectsSection />
-        <NavigationButtons />
-    </div>
+  <div className="flex flex-col gap-12">
+    <AboutSection />
+    <SkillsSection />
+    <ExperienceSection />
+    <ProjectsSection />
+    <NavigationButtons />
+  </div>
 );
 
 export default Page;

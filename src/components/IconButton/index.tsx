@@ -5,41 +5,41 @@ import { WithChildren, WithClassName, WithOnClick } from "@/types/react";
 import { cn } from "@/utils/tailwind";
 
 type IconButtonProps = WithChildren &
-    WithOnClick &
-    WithClassName & {
-        name: string;
-        href?: string;
-    };
+  WithOnClick &
+  WithClassName & {
+    name: string;
+    href?: string;
+  };
 
 const IconButton: FC<IconButtonProps> = ({
-    name,
-    href,
-    onClick,
-    className,
-    children,
+  name,
+  href,
+  onClick,
+  className,
+  children,
 }) => {
-    if (href) {
-        return (
-            <Link
-                title={name}
-                href={href}
-                className={cn(BASE_ANIMATIONS, className)}
-                onClick={onClick}
-            >
-                {children}
-            </Link>
-        );
-    }
-
+  if (href) {
     return (
-        <button
-            title={name}
-            className={cn(BASE_ANIMATIONS, className)}
-            onClick={onClick}
-        >
-            {children}
-        </button>
+      <Link
+        title={name}
+        href={href}
+        className={cn(BASE_ANIMATIONS, className)}
+        onClick={onClick}
+      >
+        {children}
+      </Link>
     );
+  }
+
+  return (
+    <button
+      title={name}
+      className={cn(BASE_ANIMATIONS, className)}
+      onClick={onClick}
+    >
+      {children}
+    </button>
+  );
 };
 
 export default IconButton;

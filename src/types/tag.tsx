@@ -1,41 +1,41 @@
 import { ForwardRefExoticComponent } from "react";
 import { IconCloud, IconProps } from "@tabler/icons-react";
 import {
-    IconType,
-    SiNextdotjs,
-    SiNextdotjsHex,
-    SiTailwindcss,
-    SiTailwindcssHex,
-    SiTypescript,
-    SiTypescriptHex,
+  IconType,
+  SiNextdotjs,
+  SiNextdotjsHex,
+  SiTailwindcss,
+  SiTailwindcssHex,
+  SiTypescript,
+  SiTypescriptHex,
 } from "@icons-pack/react-simple-icons";
 
 export type BrandTagType = {
-    name: string;
-    icon: ForwardRefExoticComponent<IconProps> | IconType;
-    color?: string;
+  name: string;
+  icon: ForwardRefExoticComponent<IconProps> | IconType;
+  color?: string;
 };
 
 export const devopsTag: BrandTagType = {
-    name: "DevOps",
-    icon: IconCloud,
-    color: "#000",
+  name: "DevOps",
+  icon: IconCloud,
+  color: "#000",
 };
 
 export const nextJsTag: BrandTagType = {
-    name: "Next.js",
-    icon: SiNextdotjs,
-    color: SiNextdotjsHex,
+  name: "Next.js",
+  icon: SiNextdotjs,
+  color: SiNextdotjsHex,
 };
 
 export const tailwindCssTag: BrandTagType = {
-    name: "Tailwind CSS",
-    icon: SiTailwindcss,
-    color: SiTailwindcssHex,
+  name: "Tailwind CSS",
+  icon: SiTailwindcss,
+  color: SiTailwindcssHex,
 };
 
 export const typescriptTag: BrandTagType = {
-    name: "TypeScript",
-    icon: SiTypescript,
-    color: SiTypescriptHex,
+  name: "TypeScript",
+  icon: SiTypescript,
+  color: SiTypescriptHex,
 };

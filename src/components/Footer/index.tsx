@@ -3,26 +3,26 @@ import Link from "@/components/Link";
 import { ANCHOR_START } from "@/utils/anchor";
 
 const Footer: FC = () => (
-    // to keep footer visible, add padding bottom
-    <footer className="pb-32 lg:pb-4 text-center">
-        <div className="flex justify-center gap-2 md:gap-4">
-            <div className="flex justify-center">
-                &copy;&nbsp;{new Date().getFullYear()}&nbsp;Dominik Baurecht
-            </div>
-            &middot;
-            <Link
-                title="Kontakt"
-                href={ANCHOR_START}
-                target="_self"
-            >
-                Kontakt
-            </Link>
-        </div>
-        <code className="italic font-light text-xs md:text-sm">
-            &#123;/* version: {process.env.NEXT_PUBLIC_VERSION}, build with
-            React and Next.js */&#125;
-        </code>
-    </footer>
+  // to keep footer visible, add padding bottom
+  <footer className="pt-8 pb-32 lg:pb-4 text-center">
+    <div className="flex justify-center gap-2 md:gap-4">
+      <div className="flex justify-center">
+        &copy;&nbsp;{new Date().getFullYear()}&nbsp;Dominik Baurecht
+      </div>
+      &middot;
+      <Link
+        title="Kontakt"
+        href={ANCHOR_START}
+        target="_self"
+      >
+        Kontakt
+      </Link>
+    </div>
+    <code className="italic font-light text-xs md:text-sm">
+      &#123;/* version: {process.env.NEXT_PUBLIC_VERSION}, build with React and
+      Next.js */&#125;
+    </code>
+  </footer>
 );
 
 export default Footer;

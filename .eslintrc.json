@@ -1,26 +1,22 @@
 {
-    "root": true,
-    "extends": [
-        "next/core-web-vitals",
-        "eslint-config-next",
-        "next/typescript",
-        "plugin:react-hooks/recommended"
-    ],
-    "ignorePatterns": [
-        ".next/*",
-        "node_modules/*",
-        "build/*"
-    ],
-    "plugins": ["prettier", "react-hooks"],
-    "rules": {
-        "prettier/prettier": "error",
-        "react-hooks/rules-of-hooks": "warn",
-        "react-hooks/exhaustive-deps": "warn",
-        "react/no-array-index-key": "error"
-    },
-    "settings": {
-        "react": {
-            "version": "detect"
-        }
+  "root": true,
+  "extends": [
+    "next/core-web-vitals",
+    "eslint-config-next",
+    "next/typescript",
+    "plugin:react-hooks/recommended"
+  ],
+  "ignorePatterns": [".next/*", "node_modules/*", "build/*"],
+  "plugins": ["prettier", "react-hooks"],
+  "rules": {
+    "prettier/prettier": "error",
+    "react-hooks/rules-of-hooks": "warn",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/no-array-index-key": "error"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
     }
+  }
 }
