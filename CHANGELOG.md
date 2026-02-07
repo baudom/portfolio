@@ -1,3 +1,15 @@
+## [1.0.3](https://github.com/baudom/portfolio/compare/v1.0.2...v1.0.3) (2026-02-07)
+
+### 💡 Improvements
+
+* add animations ([#7](https://github.com/baudom/portfolio/issues/7)) ([7f0f0e6](https://github.com/baudom/portfolio/commit/7f0f0e63d5306f73c199dbc5d04b2acb473208c5))
+* ci improvements ([#10](https://github.com/baudom/portfolio/issues/10)) ([428bce7](https://github.com/baudom/portfolio/commit/428bce7f7d6553e2d6aa1e3f153e0a2c658b7e95))
+
+### 🏗️ Build System
+
+* **deps:** bump tar in the npm_and_yarn group across 1 directory ([#5](https://github.com/baudom/portfolio/issues/5)) ([ed1c28f](https://github.com/baudom/portfolio/commit/ed1c28fbf2588ea004fd9f2e4d8dce6d00dbd065))
+* **deps:** bump the npm_and_yarn group across 1 directory with 4 updates ([#9](https://github.com/baudom/portfolio/issues/9)) ([d885fbd](https://github.com/baudom/portfolio/commit/d885fbdde550aaf5a73a97e54fdfdfee94c41725))
+
 ## [1.0.2](https://github.com/baudom/portfolio/compare/v1.0.1...v1.0.2) (2025-12-24)
 
 ### Bug Fixes

@@ -6,7 +6,7 @@ networks:
 services:
   app:
     container_name: portfolio
-    image: portfolio:1.0.2
+    image: portfolio:1.0.3
     mem_limit: 512m
     pull_policy: build
     restart: always
@@ -19,7 +19,7 @@ services:
         TRACKING_API_HOST: ${TRACKING_API_HOST}
         TRACKING_API_KEY: ${TRACKING_API_KEY}
       tags:
-        - portfolio:1.0.2
+        - portfolio:1.0.3
         - portfolio:latest
     networks:
       - proxynet
