@@ -22,7 +22,7 @@ const SectionContainer: FC<SectionContainerProps> = ({
   <section
     id={id.replace("#", "")}
     className={cn(
-      "min-h-screen place-content-center justify-items-center",
+      "flex flex-col min-h-screen items-center justify-center",
       className,
     )}
   >

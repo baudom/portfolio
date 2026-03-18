@@ -61,7 +61,7 @@ const AboutSection: FC = () => {
               </div>
             </div>
 
-            <div className="justify-items-center md:justify-items-end mb-4 md:mb-0 pointer-events-none select-none">
+            <div className="flex justify-center md:justify-end mb-4 md:mb-0 pointer-events-none select-none">
               <div className="relative">
                 <p className="z-10 absolute motion-safe:animate-[wiggle_2s_infinite] -top-8 -left-8 text-7xl">
                   &#128075;

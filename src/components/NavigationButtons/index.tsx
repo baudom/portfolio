@@ -47,7 +47,7 @@ const NavigationButtons: FC = () => {
 
   return (
     <nav
-      className={`fixed transition-all duration-500 ease-in-out z-50 p-4 pb-2 lg:p-4 rounded-2xl backdrop-blur-sm bg-glass-panel ${
+      className={`shadow-xl fixed transition-all duration-500 ease-in-out z-50 p-4 pb-2 lg:p-4 rounded-2xl backdrop-blur-sm bg-glass-panel ${
         navShown
           ? "opacity-100 -translate-x-1/2 lg:translate-x-0"
           : "opacity-0 pointer-events-none -translate-x-1/2 translate-y-20 lg:translate-x-20 lg:translate-y-0"

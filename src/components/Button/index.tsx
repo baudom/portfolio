@@ -18,7 +18,7 @@ const Button: FC<ButtonProps> = ({ href, className, children }) => {
       className={cn(
         BASE_ANIMATIONS,
         classes.animated,
-        "skewed min-w-32 text-background bg-glass border-2 border-glass p-2 font-semibold rounded-xl justify-items-center",
+        "flex items-center justify-center skewed min-w-32 text-background bg-glass border-2 border-glass p-2 font-semibold rounded-xl",
         "hover:bg-glass-hover",
         className,
       )}
