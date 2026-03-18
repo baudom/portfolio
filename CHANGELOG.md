@@ -1,3 +1,15 @@
+## [1.0.4](https://github.com/baudom/portfolio/compare/v1.0.3...v1.0.4) (2026-03-18)
+
+### 🐞 Bug Fixes
+
+* firefox unsupported classes ([9e799ce](https://github.com/baudom/portfolio/commit/9e799ce82625b87ada830cd051e09a051790a838))
+
+### 🏗️ Build System
+
+* **deps:** bump tar in the npm_and_yarn group across 1 directory ([#12](https://github.com/baudom/portfolio/issues/12)) ([c20b03a](https://github.com/baudom/portfolio/commit/c20b03a28c51b6e85cea89c70dde118b7fd174d2))
+* **deps:** bump tar in the npm_and_yarn group across 1 directory ([#13](https://github.com/baudom/portfolio/issues/13)) ([f88900f](https://github.com/baudom/portfolio/commit/f88900f58f75d74e5e16393171077085eb9b40f1))
+* **deps:** bump the npm_and_yarn group across 1 directory with 2 updates ([#14](https://github.com/baudom/portfolio/issues/14)) ([c24d6a9](https://github.com/baudom/portfolio/commit/c24d6a95f69b965efab0899fcd1818e0f01259f0))
+
 ## [1.0.3](https://github.com/baudom/portfolio/compare/v1.0.2...v1.0.3) (2026-02-07)
 
 ### 💡 Improvements
