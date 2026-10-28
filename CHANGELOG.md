@@ -1,3 +1,19 @@
+## [1.0.5](https://github.com/baudom/portfolio/compare/v1.0.4...v1.0.5) (2026-10-28)
+
+### 🏗️ Build System
+
+* **deps-dev:** bump postcss ([#19](https://github.com/baudom/portfolio/issues/19)) ([112fa0a](https://github.com/baudom/portfolio/commit/112fa0a314be4a2ee8768a86c8ca3d1a420bc405))
+* **deps-dev:** bump postcss ([#23](https://github.com/baudom/portfolio/issues/23)) ([e876022](https://github.com/baudom/portfolio/commit/e876022d58e38c2c47eebc2691cf9efd42cd70e0))
+* **deps:** bump baseline-browser-mapping ([#25](https://github.com/baudom/portfolio/issues/25)) ([901101a](https://github.com/baudom/portfolio/commit/901101aa4381732b3e7452b32af33d4c1cca3ce2))
+* **deps:** bump flatted in the npm_and_yarn group across 1 directory ([#16](https://github.com/baudom/portfolio/issues/16)) ([8770bbe](https://github.com/baudom/portfolio/commit/8770bbeb356467b64bf5d961686155697586e7e0))
+* **deps:** bump ip-address ([#18](https://github.com/baudom/portfolio/issues/18)) ([5590db8](https://github.com/baudom/portfolio/commit/5590db880a50d6c66109818e31de6fb254d71782))
+* **deps:** bump next in the npm_and_yarn group across 1 directory ([#20](https://github.com/baudom/portfolio/issues/20)) ([508023f](https://github.com/baudom/portfolio/commit/508023f539e4731bc264b1acbed468b051746e5c))
+* **deps:** bump tar in the npm_and_yarn group across 1 directory ([#21](https://github.com/baudom/portfolio/issues/21)) ([0b43d21](https://github.com/baudom/portfolio/commit/0b43d21801812a52a1efe1639725a4f6c322c6b9))
+* **deps:** bump the npm_and_yarn group across 1 directory with 2 updates ([#24](https://github.com/baudom/portfolio/issues/24)) ([5916a12](https://github.com/baudom/portfolio/commit/5916a12fbcd575e29f65f46413979da9872451ba))
+* **deps:** bump the npm_and_yarn group across 1 directory with 3 updates ([#17](https://github.com/baudom/portfolio/issues/17)) ([133ffbd](https://github.com/baudom/portfolio/commit/133ffbdd787d6b159769cbfb5c07b21d0cce9df2))
+* **deps:** bump the npm_and_yarn group across 1 directory with 6 updates ([#22](https://github.com/baudom/portfolio/issues/22)) ([421c427](https://github.com/baudom/portfolio/commit/421c42704f10f33d8a4c94fc23579cb3498884e2))
+* **deps:** bump the npm_and_yarn group across 1 directory with 9 updates ([#29](https://github.com/baudom/portfolio/issues/29)) ([39d6ace](https://github.com/baudom/portfolio/commit/39d6ace1210a8471b06e0ab1c9ef7c8cf71331e5))
+
 ## [1.0.4](https://github.com/baudom/portfolio/compare/v1.0.3...v1.0.4) (2026-03-18)
 
 ### 🐞 Bug Fixes
